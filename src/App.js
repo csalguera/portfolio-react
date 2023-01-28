@@ -5,15 +5,16 @@ import Contact from './pages/Contact'
 import Landing from './pages/Landing'
 import Projects from './pages/Projects'
 import Resume from './pages/Resume'
+import Nav from './components/Nav'
 
 function App() {
   return (
     <>
-      <h1>App</h1>
+      <Nav />
       <Routes>
+        <Route path={'/'} element={<Landing />} />
         <Route path={'/about'} element={<About />} />
         <Route path={'/contact'} element={<Contact />} />
-        <Route path={'/'} element={<Landing />} />
         <Route path={'/projects'} element={<Projects />} />
         <Route path={'/resume'} element={<Resume />} />
       </Routes>
