@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
-import { projects } from '../data/projects'
 
-const ProjectList = () => {
+const ProjectList = ({ projects }) => {
   return (
     <>
       {projects.map(project =>
