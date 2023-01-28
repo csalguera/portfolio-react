@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
+import ProjectPreview from './ProjectPreview'
 
 const ProjectList = ({ projects }) => {
   return (
     <>
       {projects.map(project =>
         <ul>
-          <li>{project.title}</li>
+          <li><ProjectPreview project={project}/></li>
           <li>{project.description}</li>
           <li><img className='projects-img' src={project.image} alt="" /></li>
           <li><Link to={project.repositoryLink}>Repository</Link></li>
