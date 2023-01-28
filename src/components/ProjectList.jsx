@@ -6,9 +6,8 @@ const ProjectList = ({ projects }) => {
     <>
       {projects.map(project =>
         <ul>
-          <li><ProjectPreview project={project}/></li>
+          <ProjectPreview project={project}/>
           <li>{project.description}</li>
-          <li><img className='projects-img' src={project.image} alt="" /></li>
           <li><Link to={project.repositoryLink}>Repository</Link></li>
           <li><Link to={project.deploymentLink}>Launch App</Link></li>
         </ul>

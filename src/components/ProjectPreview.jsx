@@ -1,7 +1,17 @@
 const ProjectPreview = ({ project }) => {
   return (
     <>
-      {project.title}
+      <div>
+        <img className="projects-img" src={project.image} alt={project.title} />
+        <section>
+          <h3>
+            {project.title}
+          </h3>
+          <button>
+            Learn more
+          </button>
+        </section>
+      </div>
     </>
   )
 }
