@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import '../styles/Contact.css'
+import '../styles/contact.css'
 
 function Contact() {
   return (
     <>
       <h1>Contact</h1>
       <p>
-        Reach out to me via <a href="mailto:carlos.e.salguera@gmail.com">email</a>
+        Connect with me via <a href="mailto:carlos.e.salguera@gmail.com">email</a>
       </p>
       <p>Alternatively via:</p>
       <ul>

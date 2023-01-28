@@ -8,7 +8,7 @@ export const projects = [
   },
   {
     title: 'garner',
-    description: 'An app that recreates the classic game of Connect Four. Play against another player locally.',
+    description: 'An app where authenticated users can create, edit, or delete collections of their favorite games.',
     image: 'https://i.imgur.com/gP3hltL.png',
     repositoryLink: 'https://github.com/csalguera/garner',
     deploymentLink: 'https://garner-game-collector.fly.dev/',
