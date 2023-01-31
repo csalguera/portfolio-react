@@ -5,7 +5,7 @@ const ProjectList = ({ projects }) => {
   return (
     <>
       {projects.map(project =>
-        <ul>
+        <ul key={project.title}>
           <ProjectPreview project={project}/>
           <li>{project.description}</li>
           <li><Link to={project.repositoryLink}>Repository</Link></li>
