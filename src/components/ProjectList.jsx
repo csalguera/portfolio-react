@@ -7,9 +7,6 @@ const ProjectList = ({ projects }) => {
       {projects.map(project =>
         <ul key={project.title}>
           <ProjectPreview project={project}/>
-          <li>{project.description}</li>
-          <li><Link to={project.repositoryLink}>Repository</Link></li>
-          <li><Link to={project.deploymentLink}>Launch App</Link></li>
         </ul>
       )}
     </>
