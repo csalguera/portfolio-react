@@ -2,6 +2,7 @@ import { findProject } from "../utilities/findProject"
 import { useParams } from "react-router-dom"
 
 const ProjectDetails = () => {
+  console.log(useParams());
   const url = useParams().projectDetails
   const project = findProject(url)
 
