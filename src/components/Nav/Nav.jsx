@@ -1,16 +1,53 @@
 import styles from './Nav.module.css'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
+  const location = useLocation()
+
   return (
     <>
       <nav>
         <ul className={styles.navbar}>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/about'>About</Link></li>
-          <li><Link to='/contact'>Contact</Link></li>
-          <li><Link to='/projects'>Projects</Link></li>
-          <li><Link to='/resume'>Resume</Link></li>
+          <li>
+            <Link
+              to='/'
+              className={location.pathname === '/' ? styles.active : ''}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/about'
+              className={location.pathname === '/about' ? styles.active : ''}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/contact'
+              className={location.pathname === '/contact' ? styles.active : ''}
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/projects'
+              className={location.pathname === '/projects' ? styles.active : ''}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/resume'
+              className={location.pathname === '/resume' ? styles.active : ''}
+            >
+              Resume
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
