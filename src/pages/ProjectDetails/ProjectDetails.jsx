@@ -1,4 +1,5 @@
-import { findProject } from "../utilities/findProject"
+import styles from './ProjectDetails.module.css'
+import { findProject } from "../../utilities/findProject"
 import { useParams } from "react-router-dom"
 
 const ProjectDetails = () => {
@@ -9,7 +10,7 @@ const ProjectDetails = () => {
     <>
       <h1>{project.title}</h1>
       <p>{project.description}</p>
-      <img className="projects-img" src={project.image} alt="" />
+      <img className={styles['projects-img']} src={project.image} alt="" />
       <article>
         <a href={project.repositoryLink} target="_blank" rel="noreferrer">
           <button>View Repository</button>

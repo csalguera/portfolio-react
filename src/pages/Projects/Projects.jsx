@@ -1,6 +1,6 @@
-import '../styles/projects.css'
-import { projects } from '../data/projects'
-import ProjectList from '../components/ProjectList'
+import './Projects.css'
+import { projects } from '../../data/projects'
+import ProjectList from '../../components/ProjectList'
 
 function Projects() {
   return (

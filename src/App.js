@@ -1,12 +1,12 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Landing from './pages/Landing'
-import Projects from './pages/Projects'
-import Resume from './pages/Resume'
+import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
+import Landing from './pages/Landing/Landing'
+import Projects from './pages/Projects/Projects'
+import Resume from './pages/Resume/Resume'
 import Nav from './components/Nav'
-import ProjectDetails from './pages/ProjectDetails'
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
 
 function App() {
   return (
