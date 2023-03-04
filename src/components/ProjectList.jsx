@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import ProjectPreview from './ProjectPreview'
 
 const ProjectList = ({ projects }) => {
