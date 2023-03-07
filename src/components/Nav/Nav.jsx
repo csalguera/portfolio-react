@@ -21,16 +21,16 @@ const Nav = (props) => {
           >
             Home
           </Link>
-          <button onClick={() => scrollToRef(projectsRef)}>
+          <button onClick={() => scrollToRef(projectsRef)} className={styles['nav-button']}>
             Projects
           </button>
-          <button onClick={() => scrollToRef(aboutRef)}>
+          <button onClick={() => scrollToRef(aboutRef)} className={styles['nav-button']}>
             About
           </button>
-          <button onClick={() => scrollToRef(resumeRef)}>
+          <button onClick={() => scrollToRef(resumeRef)} className={styles['nav-button']}>
             Resume
           </button>
-          <button onClick={() => scrollToRef(contactRef)}>
+          <button onClick={() => scrollToRef(contactRef)} className={styles['nav-button']}>
             Contact
           </button>
         </div>
