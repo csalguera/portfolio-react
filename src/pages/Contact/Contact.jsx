@@ -12,6 +12,10 @@ function Contact({ contactRef }) {
         <li><Link to="https://www.linkedin.com/in/carlos-salguera/" target="_blank">LinkedIn</Link></li>
         <li><Link to="https://github.com/csalguera" target="_blank">GitHub</Link></li>
       </ul>
+      <h1>Resume</h1>
+      <p>
+        View <a href="/carlos-salguera-resume.pdf" target="_blank">here</a> or download <a href="/carlos-salguera-resume.pdf" download>here.</a>
+      </p>
     </main>
   )
 }

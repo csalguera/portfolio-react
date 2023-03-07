@@ -1,5 +1,4 @@
 import styles from './Nav.module.css'
-import { Link, useLocation } from "react-router-dom";
 
 const Nav = (props) => {
   const {
@@ -7,10 +6,8 @@ const Nav = (props) => {
     landingRef,
     projectsRef,
     aboutRef,
-    resumeRef,
     contactRef,
   } = props
-  const location = useLocation()
 
   return (
     <>
@@ -24,9 +21,6 @@ const Nav = (props) => {
           </button>
           <button onClick={() => scrollToRef(aboutRef)} className={styles['nav-button']}>
             About
-          </button>
-          <button onClick={() => scrollToRef(resumeRef)} className={styles['nav-button']}>
-            Resume
           </button>
           <button onClick={() => scrollToRef(contactRef)} className={styles['nav-button']}>
             Contact
