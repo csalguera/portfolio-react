@@ -1,21 +1,24 @@
 .navbar {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid 1px black;
+  min-height: 8vh;
 }
 
-.navbar li {
-  margin: 0 8px;
+.navbar * {
+  margin: 0 32px;
   list-style: none;
 }
 
-.navbar li * {
+.navbar * {
   color: black;
   text-decoration: none;
   font-size: 24px;
 }
 
-.navbar li *:hover,
+.navbar *:hover,
 .active {
   font-weight: bold;
 }

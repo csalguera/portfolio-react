@@ -4,3 +4,15 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+.about-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

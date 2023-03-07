@@ -2,3 +2,12 @@ img {
   width: 300px;
   height: 300px;
 }
+
+.page-component-container {
+  margin: 0;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px black;
+}
