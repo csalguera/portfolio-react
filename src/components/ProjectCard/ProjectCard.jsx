@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './ProjectCard.module.css'
 
 const ProjectCard = ({ project }) => {
@@ -19,6 +20,20 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
       <p>{project.description}</p>
+      <div className={styles["links-container"]}>
+        <Link
+          to={project.repositoryLink}
+          target='_blank'
+        >
+          GitHub
+        </Link>
+        <Link
+          to={project.deploymentLink}
+          target='_blank'
+        >
+          App
+        </Link>
+      </div>
     </div>
   )
 }

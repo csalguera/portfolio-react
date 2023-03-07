@@ -1,4 +1,5 @@
 import './App.css'
+import { useRef } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
@@ -8,17 +9,29 @@ import Resume from './pages/Resume/Resume'
 import Nav from './components/Nav/Nav'
 
 function App() {
+  const projectsRef = useRef(null)
+  const aboutRef = useRef(null)
+  const resumeRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const scrollToRef = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <>
-      <Nav />
-      <Routes>
-        <Route path={'/'} element={<Landing />} />
-        <Route path={'/about'} element={<About />} />
-        <Route path={'/contact'} element={<Contact />} />
-        <Route path={'/projects'} element={<Projects />} />
-        <Route path={'/resume'} element={<Resume />} />
-      </Routes>
-      <Projects />
+      <Nav
+        projectsRef={projectsRef}
+        aboutRef={aboutRef}
+        resumeRef={resumeRef}
+        contactRef={contactRef}
+        scrollToRef={scrollToRef}
+      />
+      <Landing />
+      <Projects projectsRef={projectsRef} />
+      <About aboutRef={aboutRef} />
+      <Resume resumeRef={resumeRef} />
+      <Contact contactRef={contactRef} />
     </>
   )
 }

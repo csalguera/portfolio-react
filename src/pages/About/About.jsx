@@ -1,8 +1,8 @@
 import styles from './About.module.css'
 
-function About() {
+function About({ aboutRef }) {
   return (
-    <main className='page-component-container'>
+    <main className='page-component-container' ref={aboutRef}>
       <h1>About</h1>
       <img className={styles['about-img']} src="https://i.imgur.com/H5qSmJf.jpg" alt="" />
       <div className={styles["about-container"]}>

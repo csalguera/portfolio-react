@@ -29,3 +29,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.links-container {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links-container * {
+  text-decoration: none;
+  color: black;
+}
+
+.links-container *:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
