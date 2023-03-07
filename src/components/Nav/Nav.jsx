@@ -18,22 +18,6 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to='/about'
-              className={location.pathname === '/about' ? styles.active : ''}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to='/contact'
-              className={location.pathname === '/contact' ? styles.active : ''}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link
               to='/projects'
               className={location.pathname === '/projects' ? styles.active : ''}
             >
@@ -42,10 +26,26 @@ const Nav = () => {
           </li>
           <li>
             <Link
+              to='/about'
+              className={location.pathname === '/about' ? styles.active : ''}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
               to='/resume'
               className={location.pathname === '/resume' ? styles.active : ''}
             >
               Resume
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/contact'
+              className={location.pathname === '/contact' ? styles.active : ''}
+            >
+              Contact
             </Link>
           </li>
         </ul>
