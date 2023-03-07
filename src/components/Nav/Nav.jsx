@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Nav = (props) => {
   const {
     scrollToRef,
+    landingRef,
     projectsRef,
     aboutRef,
     resumeRef,
@@ -15,12 +16,9 @@ const Nav = (props) => {
     <>
       <nav>
         <div className={styles.navbar}>
-          <Link
-            to='/'
-            className={location.pathname === '/' ? styles.active : ''}
-          >
-            Home
-          </Link>
+          <button onClick={() => scrollToRef(landingRef)} className={styles['nav-button']}>
+            CS
+          </button>
           <button onClick={() => scrollToRef(projectsRef)} className={styles['nav-button']}>
             Projects
           </button>
