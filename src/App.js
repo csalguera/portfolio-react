@@ -1,10 +1,11 @@
 import './App.css'
 import { useRef } from 'react'
+import Nav from './components/Nav/Nav'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Landing from './pages/Landing/Landing'
 import Projects from './pages/Projects/Projects'
-import Nav from './components/Nav/Nav'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const landingRef = useRef(null)
@@ -29,6 +30,7 @@ function App() {
       <Projects projectsRef={projectsRef} />
       <About aboutRef={aboutRef} />
       <Contact contactRef={contactRef} />
+      <Footer />
     </>
   )
 }

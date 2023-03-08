@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Contact({ contactRef }) {
   return (
-    <main className='page-component-container' ref={contactRef}>
+    <main className={styles.container} ref={contactRef}>
       <h1>Contact</h1>
       <div className={styles["contact-details"]}>
         <div className={styles.email}>

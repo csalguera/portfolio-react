@@ -1,0 +1,11 @@
+.footer {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(222, 220, 222, 0.9);
+}
+
+.footer p {
+  font-size: 24px;
+}
