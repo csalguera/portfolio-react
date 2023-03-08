@@ -13,7 +13,11 @@ const Nav = (props) => {
     <>
       <nav>
         <div className={styles.navbar}>
-          <button onClick={() => scrollToRef(landingRef)} className={styles['nav-button']}>
+          <button
+            onClick={() => scrollToRef(landingRef)}
+            className={styles['nav-button']}
+            style={{fontFamily: 'Pacifico'}}
+          >
             CS
           </button>
           <button onClick={() => scrollToRef(projectsRef)} className={styles['nav-button']}>
