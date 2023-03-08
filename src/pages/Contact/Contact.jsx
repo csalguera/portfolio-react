@@ -50,6 +50,7 @@ function Contact({ contactRef }) {
             {' | '}
             <Link
             to="/carlos-salguera-resume.pdf"
+            target='_blank'
             download
             className={styles["link-tag"]}
             >
