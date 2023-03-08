@@ -4,7 +4,7 @@ function About({ aboutRef }) {
   return (
     <main className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
       <h1>About</h1>
-      <div className={styles["about-container"]}>
+      <div className={`${styles["about-container"]} ${styles["goal-container"]}`}>
         <h2>Goal</h2>
         <p>Software Engineer focused on <b>Full Stack Development</b></p>
         <p>Currently <b>seeking full-time</b> opportunity in <b>Indianapolis, IN</b></p>
@@ -45,7 +45,7 @@ function About({ aboutRef }) {
       </div>
       <div className={styles["about-container"]}>
         <h2>Journey</h2>
-        <p>I have always been fascinated by the STEM fields since I was a kid, excelling in mathematics and physics. Contrary to my inclination, I spent my adulthood working in the food industry. Throughout 2018 until the end of 2019 I attended IvyTech to study Electrical Engineering. Due to unforeseen circumstances, I put my education on hold to focus on my career. I received multiple promotions but ultimately concluded that I was not satisfied. In November of 2022, I made the decision to pursue Software Engineering. I graduated from General Assembly in March of 2023 and now seek a full-time opportunity to showcase what I have learned.</p>
+        <p className={styles["journey-text"]}>I have always been fascinated by the STEM fields since I was a kid, excelling in mathematics and physics. Contrary to my inclination, I spent my adulthood working in the food industry. Throughout 2018 until the end of 2019 I attended IvyTech to study Electrical Engineering. Due to unforeseen circumstances, I put my education on hold to focus on my career. I received multiple promotions but ultimately concluded that I was not satisfied. In November of 2022, I made the decision to pursue Software Engineering. I graduated from General Assembly in March of 2023 and now seek a full-time opportunity to showcase what I have learned.</p>
       </div>
     </main>
   )
