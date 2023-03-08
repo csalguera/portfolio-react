@@ -4,8 +4,8 @@ import styles from './ProjectCard.module.css'
 const ProjectCard = ({ project }) => {
   return (
     <div className={styles["project-card-container"]}>
-      <img src={project.image} alt={project.title} />
       <h2>{project.title}</h2>
+      <img src={project.image} alt={project.title} />
       <div className={styles["technologies-container"]}>
         {project.technologies?.map((technology, idx) => (
           <div key={technology} className={styles["technology-content"]}>
@@ -24,12 +24,14 @@ const ProjectCard = ({ project }) => {
         <Link
           to={project.repositoryLink}
           target='_blank'
+          className={styles["link-tag"]}
         >
           GitHub
         </Link>
         <Link
           to={project.deploymentLink}
           target='_blank'
+          className={styles["link-tag"]}
         >
           App
         </Link>

@@ -11,6 +11,10 @@
   padding: 24px;
 }
 
+.project-card-container img {
+  border-radius: 15px;
+}
+
 .technologies-container {
   display: flex;
   margin: 0;
@@ -44,4 +48,8 @@
 .links-container *:hover {
   text-decoration: underline;
   color: black;
+}
+
+.link-tag:hover {
+  color: #94a8b3;
 }
