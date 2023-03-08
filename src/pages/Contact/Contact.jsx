@@ -1,5 +1,8 @@
-import styles from './Contact.module.css'
+// npm packages
 import { Link } from 'react-router-dom'
+
+// styles
+import styles from './Contact.module.css'
 
 function Contact({ contactRef }) {
   return (

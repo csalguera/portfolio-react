@@ -1,7 +1,9 @@
+// npm packages
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
+// styles
 import styles from './ProjectCard.module.css'
 
 const ProjectCard = ({ project }) => {

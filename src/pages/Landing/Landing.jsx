@@ -1,3 +1,4 @@
+// styles
 import styles from './Landing.module.css'
 
 function Landing({ landingRef }) {

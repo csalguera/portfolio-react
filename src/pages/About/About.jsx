@@ -1,3 +1,4 @@
+// styles
 import styles from './About.module.css'
 
 function About({ aboutRef }) {

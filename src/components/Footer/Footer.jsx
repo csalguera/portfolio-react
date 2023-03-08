@@ -1,4 +1,7 @@
+// npm packages
 import { Link } from 'react-router-dom'
+
+// styles
 import styles from './Footer.module.css'
 
 const Footer = () => {
