@@ -2,9 +2,8 @@ import styles from './About.module.css'
 
 function About({ aboutRef }) {
   return (
-    <main className='page-component-container' ref={aboutRef}>
+    <main className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
       <h1>About</h1>
-      <img className={styles['about-img']} src="https://i.imgur.com/H5qSmJf.jpg" alt="" />
       <div className={styles["about-container"]}>
         <h2>Goal</h2>
         <p>Software Engineer focused on <b>Full Stack Development</b></p>
@@ -16,18 +15,33 @@ function About({ aboutRef }) {
       </div>
       <div className={styles["about-container"]}>
         <h2>Skills</h2>
-        <ul>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Node</li>
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-          <li>Sequelize</li>
-          <li>Mongoose</li>
-          <li>JavaScript</li>
-          <li>CSS</li>
-          <li>HTML</li>
-        </ul>
+        <div className={styles["skills-container"]}>
+          <div className={styles["front-end"]}>
+            <h3>Front End</h3>
+            <p>React</p>
+            <p>TypeScript</p>
+            <p>JavaScript</p>
+            <p>CSS</p>
+            <p>HTML</p>
+          </div>
+          <div className={styles["back-end"]}>
+            <h3>Back End</h3>
+            <p>Node</p>
+            <p>Express</p>
+            <p>PostgreSQL</p>
+            <p>MongoDB</p>
+            <p>Sequelize</p>
+            <p>Mongoose</p>
+          </div>
+          <div className={styles.other}>
+            <h3>Other</h3>
+            <p>REST APIs</p>
+            <p>MVC Architecture</p>
+            <p>Environment Variables</p>
+            <p>JWT Auth</p>
+            <p>Google OAuth</p>
+          </div>
+        </div>
       </div>
       <div className={styles["about-container"]}>
         <h2>Journey</h2>

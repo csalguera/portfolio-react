@@ -2,7 +2,7 @@ import styles from './Landing.module.css'
 
 function Landing({ landingRef }) {
   return (
-    <main ref={landingRef}>
+    <main ref={landingRef} className={styles.container}>
       <div className={styles["landing-details"]}>
         <h1>Carlos Salguera</h1>
         <h2>Fullstack Developer</h2>

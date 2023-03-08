@@ -10,4 +10,34 @@
 
 .link-tag:hover {
   text-decoration: underline;
+  color: #94a8b3;
+}
+
+.contact-details {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email,
+.linked-in,
+.github,
+.resume {
+  height: 100px;
+  width: 100%;
+  margin: 8px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(220, 211, 201, 0.9);
+}
+
+.email img,
+.linked-in img,
+.github img,
+.resume img {
+  width: 50px;
+  margin: 0 16px 0 8px;
 }
