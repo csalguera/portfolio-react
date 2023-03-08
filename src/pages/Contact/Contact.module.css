@@ -1,0 +1,13 @@
+.page-component-container * {
+  text-decoration: none;
+}
+
+.link-tag {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.link-tag:hover {
+  text-decoration: underline;
+}
