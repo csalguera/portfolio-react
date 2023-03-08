@@ -14,7 +14,13 @@ const Footer = () => {
       <p>|</p>
       <p>Copyright © 2023 Carlos Salguera</p>
       <p>|</p>
-      <p>Attributions</p>
+      <Link
+        to='https://github.com/csalguera/portfolio-react/blob/main/attributions.md'
+        target='_blank'
+        className={styles["link-tag"]}
+      >
+        Attributions
+      </Link>
     </main>
   )
 }
