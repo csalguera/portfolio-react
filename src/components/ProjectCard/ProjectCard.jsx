@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import styles from './ProjectCard.module.css'
 
@@ -7,11 +8,13 @@ const ProjectCard = ({ project }) => {
   const [hovered, setHovered] = useState(false)
 
   function handleHover() {
-    hovered
-    ?
-    setHovered(false)
-    :
-    setHovered(true)
+    if (hovered) {
+      setHovered(false)
+      enableBodyScroll(document)
+    } else {
+      setHovered(true)
+      disableBodyScroll(document)
+    }
   }
 
   return (
