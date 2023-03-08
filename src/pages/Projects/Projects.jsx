@@ -12,7 +12,10 @@ function Projects({ projectsRef }) {
     <main className='page-component-container' ref={projectsRef}>
       <h1>Projects</h1>
       {projects.map(project => (
-        <ProjectCard project={project} key={project.title} />
+        <ProjectCard
+          project={project}
+          key={project.title}
+        />
       ))}
     </main>
   )
