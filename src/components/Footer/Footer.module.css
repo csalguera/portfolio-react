@@ -6,6 +6,17 @@
   background-color: rgba(222, 220, 222, 0.9);
 }
 
-.footer p {
+.footer p,
+.link-tag {
   font-size: 24px;
+  margin: 8px;
+}
+
+.link-tag {
+  text-decoration: none;
+  color: black;
+}
+
+.link-tag:hover {
+  font-weight: bold;
 }
