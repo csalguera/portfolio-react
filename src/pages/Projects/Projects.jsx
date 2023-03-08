@@ -4,9 +4,6 @@ import { projects } from '../../data/projects'
 // components
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
-// styles
-import './Projects.css'
-
 function Projects({ projectsRef }) {
   return (
     <main className='page-component-container' ref={projectsRef}>

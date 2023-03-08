@@ -19,6 +19,10 @@
   position: relative;
 }
 
+.img-container img {
+  width: fit-content;
+}
+
 .enlarged-img {
   max-width: 80vw;
   height: max-content;
