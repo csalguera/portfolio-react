@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'log-go',
-    description: 'An app where users can create collections of their favorite movies and books.',
+    description: 'An app where authenticated users can create, update, or delete collections of their favorite movies and books.',
     image: 'https://i.imgur.com/5jQAOqg.png" width="800px',
     repositoryLink: 'https://github.com/csalguera/log-go-front-end',
     deploymentLink: 'https://log-go-csalguera.netlify.app/',
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     title: 'garner',
-    description: 'An app where authenticated users can create, edit, or delete collections of their favorite games.',
+    description: 'An app where authenticated users can create, update, or delete collections of their favorite games.',
     image: 'https://i.imgur.com/gP3hltL.png',
     repositoryLink: 'https://github.com/csalguera/garner',
     deploymentLink: 'https://garner-game-collector.fly.dev/',

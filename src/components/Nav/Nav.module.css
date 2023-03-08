@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   background-color: rgba(222, 220, 222, 0.9);
+  z-index: 1;
 }
 
 .nav-button {
