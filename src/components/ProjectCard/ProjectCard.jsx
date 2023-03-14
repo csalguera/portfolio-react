@@ -7,14 +7,14 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import styles from './ProjectCard.module.css'
 
 const ProjectCard = ({ project }) => {
-  const [hovered, setHovered] = useState(false)
+  const [clicked, setClicked] = useState(false)
 
   function handleHover() {
-    if (hovered) {
-      setHovered(false)
+    if (clicked) {
+      setClicked(false)
       enableBodyScroll(document)
     } else {
-      setHovered(true)
+      setClicked(true)
       disableBodyScroll(document)
     }
   }
@@ -23,14 +23,14 @@ const ProjectCard = ({ project }) => {
     <div className={styles["project-card-container"]}>
       <h2>{project.title}</h2>
       <div className={styles["img-container"]}>
-        <img src={project.image} alt={project.title} onMouseEnter={handleHover} />
-        {hovered &&
+        <img src={project.image} alt={project.title} onClick={handleHover} />
+        {clicked &&
           <img
             src={project.image}
             alt={project.title}
-            onMouseLeave={handleHover}
+            onClick={handleHover}
             className={styles["enlarged-img"]}
-            style={ hovered ? { zIndex: 1 } : { zIndex: 0 } }
+            style={ clicked ? { zIndex: 1 } : { zIndex: 0 } }
           />
         }
       </div>
