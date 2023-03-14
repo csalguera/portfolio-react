@@ -21,9 +21,14 @@ function App() {
   const contactRef = useRef(null)
   const [url, setUrl] = useState(null)
 
-  const scrollToRef = (ref, url) => {
+  const handleUrlChange = (newUrl) => {
+    setUrl(newUrl)
+    window.history.pushState(null, null, newUrl)
+  }
+
+  const scrollToRef = (ref, newUrl) => {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    window.history.pushState(null, null, url)
+    handleUrlChange(newUrl)
   }
 
   return (
@@ -34,8 +39,7 @@ function App() {
         aboutRef={aboutRef}
         contactRef={contactRef}
         scrollToRef={scrollToRef}
-        url={url}
-        setUrl={setUrl}
+        handleUrlChange={handleUrlChange}
       />
       <Landing
         landingRef={landingRef}
