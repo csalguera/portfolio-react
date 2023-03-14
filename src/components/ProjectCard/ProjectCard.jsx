@@ -9,7 +9,7 @@ import styles from './ProjectCard.module.css'
 const ProjectCard = ({ project }) => {
   const [clicked, setClicked] = useState(false)
 
-  function handleHover() {
+  function handleClick() {
     if (clicked) {
       setClicked(false)
       enableBodyScroll(document)
@@ -23,12 +23,12 @@ const ProjectCard = ({ project }) => {
     <div className={styles["project-card-container"]}>
       <h2>{project.title}</h2>
       <div className={styles["img-container"]}>
-        <img src={project.image} alt={project.title} onClick={handleHover} />
+        <img src={project.image} alt={project.title} onClick={handleClick} />
         {clicked &&
           <img
             src={project.image}
             alt={project.title}
-            onClick={handleHover}
+            onClick={handleClick}
             className={styles["enlarged-img"]}
             style={ clicked ? { zIndex: 1 } : { zIndex: 0 } }
           />
