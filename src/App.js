@@ -1,5 +1,5 @@
 // npm packages
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // page components
 import About from './pages/About/About'
@@ -19,7 +19,7 @@ function App() {
   const projectsRef = useRef(null)
   const aboutRef = useRef(null)
   const contactRef = useRef(null)
-  const [url, setUrl] = useState(null)
+  const [url, setUrl] = useState('/')
 
   const handleUrlChange = (newUrl) => {
     setUrl(newUrl)
@@ -30,6 +30,34 @@ function App() {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     handleUrlChange(newUrl)
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight
+      const scrollPosition = window.scrollY
+      const projectsPosition = windowHeight * 0.5
+      const aboutPosition = windowHeight * 1.5
+      const contactPosition = windowHeight * 2.5
+
+      if (scrollPosition < projectsPosition) {
+        const newUrl = '/'
+        setUrl(newUrl)
+      } else if (scrollPosition > projectsPosition && scrollPosition < aboutPosition) {
+        const newUrl = '/projects'
+        setUrl(newUrl)
+      } else if (scrollPosition > aboutPosition && scrollPosition < contactPosition) {
+        const newUrl = '/about'
+        setUrl(newUrl)
+      } else if (scrollPosition > contactPosition) {
+        const newUrl = '/contact'
+        setUrl(newUrl)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
