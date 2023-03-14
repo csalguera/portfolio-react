@@ -22,7 +22,6 @@ function App() {
   const [url, setUrl] = useState('/')
 
   const handleUrlChange = (newUrl) => {
-    setUrl(newUrl)
     window.history.pushState(null, null, newUrl)
   }
 
