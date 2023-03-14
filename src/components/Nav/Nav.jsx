@@ -9,6 +9,7 @@ const Nav = (props) => {
     aboutRef,
     contactRef,
     handleUrlChange,
+    url,
   } = props
 
   function handleClick(evt) {
@@ -23,7 +24,7 @@ const Nav = (props) => {
       handleUrlChange('/about')
     } else if (evt.target.textContent === 'Contact') {
       scrollToRef(contactRef)
-      handleUrlChange('contact')
+      handleUrlChange('/contact')
     }
   }
 
@@ -33,18 +34,27 @@ const Nav = (props) => {
         <div className={styles.navbar}>
           <button
             onClick={handleClick}
-            className={styles['nav-button']}
+            className={`${styles['nav-button']} ${url === '/' ? styles.active : ''} ${styles.logo}`}
             style={{fontFamily: 'Pacifico'}}
           >
             CS
           </button>
-          <button onClick={handleClick} className={styles['nav-button']}>
+          <button
+            onClick={handleClick}
+            className={`${styles['nav-button']} ${url === '/projects' ? styles.active : ''}`}
+          >
             Projects
           </button>
-          <button onClick={handleClick} className={styles['nav-button']}>
+          <button
+            onClick={handleClick}
+            className={`${styles['nav-button']} ${url === '/about' ? styles.active : ''}`}
+          >
             About
           </button>
-          <button onClick={handleClick} className={styles['nav-button']}>
+          <button
+            onClick={handleClick}
+            className={`${styles['nav-button']} ${url === '/contact' ? styles.active : ''}`}
+          >
             Contact
           </button>
         </div>

@@ -40,6 +40,7 @@ function App() {
         contactRef={contactRef}
         scrollToRef={scrollToRef}
         handleUrlChange={handleUrlChange}
+        url={url}
       />
       <Landing
         landingRef={landingRef}
