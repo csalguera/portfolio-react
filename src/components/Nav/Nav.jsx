@@ -8,7 +8,19 @@ const Nav = (props) => {
     projectsRef,
     aboutRef,
     contactRef,
+    url,
+    setUrl,
   } = props
+
+  function handleClick(evt) {
+    if (evt.target.textContent === 'Projects') {
+      scrollToRef(projectsRef)
+    } else if (evt.target.textContent === 'About') {
+      scrollToRef(aboutRef)
+    } else if (evt.target.textContent === 'Contact') {
+      scrollToRef(contactRef)
+    }
+  }
 
   return (
     <>
@@ -21,13 +33,13 @@ const Nav = (props) => {
           >
             CS
           </button>
-          <button onClick={() => scrollToRef(projectsRef)} className={styles['nav-button']}>
+          <button onClick={handleClick} className={styles['nav-button']}>
             Projects
           </button>
-          <button onClick={() => scrollToRef(aboutRef)} className={styles['nav-button']}>
+          <button onClick={handleClick} className={styles['nav-button']}>
             About
           </button>
-          <button onClick={() => scrollToRef(contactRef)} className={styles['nav-button']}>
+          <button onClick={handleClick} className={styles['nav-button']}>
             Contact
           </button>
         </div>

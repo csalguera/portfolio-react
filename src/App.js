@@ -1,5 +1,5 @@
 // npm packages
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 // page components
 import About from './pages/About/About'
@@ -19,9 +19,11 @@ function App() {
   const projectsRef = useRef(null)
   const aboutRef = useRef(null)
   const contactRef = useRef(null)
+  const [url, setUrl] = useState(null)
 
-  const scrollToRef = (ref) => {
+  const scrollToRef = (ref, url) => {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    window.history.pushState(null, null, url)
   }
 
   return (
@@ -32,6 +34,8 @@ function App() {
         aboutRef={aboutRef}
         contactRef={contactRef}
         scrollToRef={scrollToRef}
+        url={url}
+        setUrl={setUrl}
       />
       <Landing
         landingRef={landingRef}
