@@ -28,11 +28,11 @@ const ProjectCard = ({ project }) => {
           <div
             className={styles["enlarged-img-container"]}
             style={clicked ? { backdropFilter: 'brightness(50%)', zIndex: 2 } : { backdropFilter: '100%' } }
+            onClick={handleClick}
           >
             <img
               src={project.image}
               alt={project.title}
-              onClick={handleClick}
               className={styles["enlarged-img"]}
               style={ clicked ? { zIndex: 1 } : { zIndex: 0 } }
             />
