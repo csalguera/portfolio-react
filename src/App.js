@@ -36,8 +36,8 @@ function App() {
       const windowHeight = window.innerHeight
       const scrollPosition = window.scrollY
       const projectsPosition = windowHeight * 0.5
-      const aboutPosition = windowHeight * 1.5
-      const contactPosition = windowHeight * 2.5
+      const aboutPosition = windowHeight * 2.8
+      const contactPosition = windowHeight * 4.5
 
       if (scrollPosition < projectsPosition) {
         const newUrl = '/'
