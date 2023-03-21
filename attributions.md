@@ -9,3 +9,5 @@
 - [Sheet Icon](https://www.svgrepo.com/svg/359381/sheet-txt) from SVG Repo
 
 - [Pacifico Font](https://fonts.google.com/specimen/Pacifico) from Google Fonts
+
+- Skills Icons from [Devicon](https://devicon.dev/) and [icons8](https://icons8.com/)
