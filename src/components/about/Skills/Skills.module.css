@@ -2,8 +2,8 @@
   display: flex;
 }
 
-.front-end,
-.back-end,
+.frontend,
+.backend,
 .other {
   width: 200px;
   display: flex;
@@ -17,8 +17,8 @@
   border-radius: 30px;
 }
 
-.front-end h3,
-.back-end h3,
+.frontend h3,
+.backend h3,
 .other h3 {
   align-self: center;
 }

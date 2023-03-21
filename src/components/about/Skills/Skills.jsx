@@ -12,7 +12,7 @@ const Skills = () => {
     <>
       <h2>Skills</h2>
       <div className={styles["skills-container"]}>
-        <div className={styles["front-end"]}>
+        <div className={styles["frontend"]}>
           <h3>Front End</h3>
           {skills.map(layer => (
               layer.frontend.map(skill => (
@@ -23,7 +23,7 @@ const Skills = () => {
               ))
           ))}
         </div>
-        <div className={styles["back-end"]}>
+        <div className={styles["backend"]}>
           <h3>Back End</h3>
           {skills.map(layer => (
             layer.backend.map(skill => (
