@@ -25,7 +25,7 @@ function About({ aboutRef }) {
             {skills.map(layer => (
                 layer.frontend.map(skill => (
                   <div className={styles["skill-container"]} key={skill.name}>
-                    <i className={skill.img} style={{backgroundColor: 'black'}}></i>
+                    <i className={skill.img}></i>
                     <p>{skill.name}</p>
                   </div>
                 ))
@@ -33,12 +33,19 @@ function About({ aboutRef }) {
           </div>
           <div className={styles["back-end"]}>
             <h3>Back End</h3>
-            <p>Node</p>
-            <p>Express</p>
-            <p>PostgreSQL</p>
-            <p>MongoDB</p>
-            <p>Sequelize</p>
-            <p>Mongoose</p>
+            {skills.map(layer => (
+              layer.backend.map(skill => (
+                <div className={styles["skill-container"]} key={skill.name}>
+                  {skill.name === 'Mongoose'
+                  ?
+                  <img src={skill.img} alt='' width='30px' />
+                  :
+                  <i className={skill.img}></i>
+                  }
+                  <p>{skill.name}</p>
+                </div>
+              ))
+            ))}
           </div>
           <div className={styles.other}>
             <h3>Other</h3>
