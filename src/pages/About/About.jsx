@@ -1,5 +1,7 @@
-// data
+// npm packages
 import { Link } from 'react-router-dom'
+
+// data
 import { skills } from '../../data/skills'
 
 // styles
