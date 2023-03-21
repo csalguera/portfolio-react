@@ -1,0 +1,70 @@
+.skills-container {
+  display: flex;
+}
+
+.front-end,
+.back-end,
+.other {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding-bottom: 4px;
+  margin: 4px;
+  background-color: rgba(222, 220, 222, 0.9);
+  border-radius: 30px;
+}
+
+.front-end h3,
+.back-end h3,
+.other h3 {
+  align-self: center;
+}
+
+.front-end .skill-container,
+.back-end .skill-container,
+.other .skill-container {
+  padding-left: 24px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-container p {
+  margin: 8px;
+  font-weight: 550;
+  text-align: start;
+}
+
+.skill-container i,
+.skill-container img {
+  margin: 8px 0;
+  box-shadow: 4px 4px 20px gray;
+  border-radius: 4px;
+  background-color: black;
+  object-fit: cover;
+}
+
+.skill-container i {
+  font-size: 30px;
+}
+
+.skill-container img {
+  width: 30px;
+  height: 30px;
+}
+
+.docs-link {
+  text-decoration: none;
+  color: black;
+}
+
+.docs-link:hover {
+  color: #94a8b3;
+  text-decoration: underline;
+}
