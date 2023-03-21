@@ -1,4 +1,5 @@
 // data
+import { Link } from 'react-router-dom'
 import { skills } from '../../data/skills'
 
 // styles
@@ -26,7 +27,9 @@ function About({ aboutRef }) {
                 layer.frontend.map(skill => (
                   <div className={styles["skill-container"]} key={skill.name}>
                     <i className={skill.img}></i>
-                    <p>{skill.name}</p>
+                    <Link to={skill.docs} target='_blank' className={styles['docs-link']}>
+                      <p>{skill.name}</p>
+                    </Link>
                   </div>
                 ))
             ))}

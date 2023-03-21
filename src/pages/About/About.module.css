@@ -85,6 +85,16 @@
   height: 30px;
 }
 
+.docs-link {
+  text-decoration: none;
+  color: black;
+}
+
+.docs-link:hover {
+  color: #94a8b3;
+  text-decoration: underline;
+}
+
 .journey-text {
   padding: 0 16px;
   text-align: left;
