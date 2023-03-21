@@ -33,10 +33,11 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight
+      console.log(windowHeight);
       const scrollPosition = window.scrollY
-      const projectsPosition = windowHeight * 0.5
-      const aboutPosition = windowHeight * 2.8
-      const contactPosition = windowHeight * 4.5
+      const projectsPosition = (windowHeight * 0.5) * (833 / windowHeight)
+      const aboutPosition = (windowHeight * 2.8) * (833 / windowHeight)
+      const contactPosition = (windowHeight * 4.5) * (833 / windowHeight)
 
       if (scrollPosition < projectsPosition) {
         const newUrl = '/'
