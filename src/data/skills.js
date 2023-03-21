@@ -3,27 +3,27 @@ export const skills = [
     frontend: [
       {
         name: 'React',
-        img: 'devicon-react-original colored',
+        devIcon: 'devicon-react-original colored',
         docs: 'https://legacy.reactjs.org/docs/getting-started.html',
       },
       {
         name: 'TypeScript',
-        img: 'devicon-typescript-plain colored',
+        devIcon: 'devicon-typescript-plain colored',
         docs: 'https://www.typescriptlang.org/docs/',
       },
       {
         name: 'JavaScript',
-        img: 'devicon-javascript-plain colored',
+        devIcon: 'devicon-javascript-plain colored',
         docs: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
       },
       {
         name: 'CSS',
-        img: 'devicon-css3-plain colored',
+        devIcon: 'devicon-css3-plain colored',
         docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
       },
       {
         name: 'HTML',
-        img: 'devicon-html5-plain colored',
+        devIcon: 'devicon-html5-plain colored',
         docs: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
       },
       {
@@ -35,27 +35,27 @@ export const skills = [
     backend: [
       {
         name: 'Node',
-        img: 'devicon-nodejs-plain colored',
+        devIcon: 'devicon-nodejs-plain colored',
         docs: 'https://nodejs.org/en/docs',
       },
       {
         name: 'Express',
-        img: 'devicon-express-original colored',
+        devIcon: 'devicon-express-original colored',
         docs: 'https://expressjs.com/',
       },
       {
         name: 'PostgreSQL',
-        img: 'devicon-postgresql-plain colored',
+        devIcon: 'devicon-postgresql-plain colored',
         docs: 'https://www.postgresql.org/docs/',
       },
       {
         name: 'Sequelize',
-        img: 'devicon-sequelize-plain colored',
+        devIcon: 'devicon-sequelize-plain colored',
         docs: 'https://sequelize.org/',
       },
       {
         name: 'MongoDB',
-        img: 'devicon-mongodb-plain colored',
+        devIcon: 'devicon-mongodb-plain colored',
         docs: 'https://www.mongodb.com/docs/',
       },
       {
@@ -67,7 +67,7 @@ export const skills = [
     other: [
       {
         name: 'NPM',
-        img: 'devicon-npm-original-wordmark colored',
+        devIcon: 'devicon-npm-original-wordmark colored',
         docs: 'https://www.npmjs.com/package/npm-docs',
       },
       {
