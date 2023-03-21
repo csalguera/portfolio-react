@@ -33,7 +33,6 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight
-      console.log(windowHeight);
       const scrollPosition = window.scrollY
       const projectsPosition = (windowHeight * 0.5) * (833 / windowHeight)
       const aboutPosition = (windowHeight * 2.8) * (833 / windowHeight)

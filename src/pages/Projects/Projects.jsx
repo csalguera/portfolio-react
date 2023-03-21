@@ -1,4 +1,4 @@
-// npm packages
+// data
 import { projects } from '../../data/projects'
 
 // components

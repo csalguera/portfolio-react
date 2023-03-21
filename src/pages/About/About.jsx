@@ -1,3 +1,6 @@
+// data
+import { skills } from '../../data/skills'
+
 // styles
 import styles from './About.module.css'
 
@@ -19,11 +22,14 @@ function About({ aboutRef }) {
         <div className={styles["skills-container"]}>
           <div className={styles["front-end"]}>
             <h3>Front End</h3>
-            <p>React</p>
-            <p>TypeScript</p>
-            <p>JavaScript</p>
-            <p>CSS</p>
-            <p>HTML</p>
+            {skills.map(layer => (
+                layer.frontend.map(skill => (
+                  <div className={styles["skill-container"]} key={skill.name}>
+                    <i className={skill.img} style={{backgroundColor: 'black'}}></i>
+                    <p>{skill.name}</p>
+                  </div>
+                ))
+            ))}
           </div>
           <div className={styles["back-end"]}>
             <h3>Back End</h3>
