@@ -13,9 +13,9 @@ const Skills = () => {
       <h2>Skills</h2>
       <div className={styles["skills-container"]}>
         <div className={styles["frontend"]}>
-          <h3>Front End</h3>
-          {skills.map(layer => (
-              layer.frontend.map(skill => (
+          <h3>Frontend</h3>
+          {skills.map(tech => (
+              tech.frontend.map(skill => (
                 <Skill
                   key={skill.name}
                   skill={skill}
@@ -24,9 +24,9 @@ const Skills = () => {
           ))}
         </div>
         <div className={styles["backend"]}>
-          <h3>Back End</h3>
-          {skills.map(layer => (
-            layer.backend.map(skill => (
+          <h3>Backend</h3>
+          {skills.map(tech => (
+            tech.backend.map(skill => (
               <Skill
                 key={skill.name}
                 skill={skill}
@@ -36,8 +36,8 @@ const Skills = () => {
         </div>
         <div className={styles["other"]}>
           <h3>Other</h3>
-          {skills.map(layer => (
-            layer.other.map(skill => (
+          {skills.map(tech => (
+            tech.other.map(skill => (
               <Skill
                 key={skill.name}
                 skill={skill}
