@@ -57,7 +57,10 @@ function About({ aboutRef }) {
             {skills.map(layer => (
               layer.other.map(skill => (
                 <div className={styles["skill-container"]} key={skill.name}>
-                  <p>{skill.name}</p>
+                  <img src={skill.img} alt="" />
+                  <Link to={skill.docs} target='_blank' className={styles['docs-link']}>
+                    <p>{skill.name}</p>
+                  </Link>
                 </div>
               ))
             ))}

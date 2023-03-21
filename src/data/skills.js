@@ -61,19 +61,29 @@ export const skills = [
     ],
     other: [
       {
-        name: 'REST APIs'
+        name: 'REST APIs',
+        img: 'https://keenethics.com/wp-content/uploads/2022/01/rest-api-1.svg',
+        docs: 'https://developer.mozilla.org/en-US/docs/Glossary/REST'
       },
       {
-        name: 'MVC Architecture'
+        name: 'MVC Architecture',
+        img: 'https://cdn2.iconfinder.com/data/icons/programming-76/512/MVC-model-view-controller-512.png',
+        docs: 'https://developer.mozilla.org/en-US/docs/Glossary/MVC',
       },
       {
-        name: 'Environment Variables'
+        name: 'Environment Variables',
+        img: 'https://cdn-1.webcatalog.io/catalog/dotenv/dotenv-icon-filled-256.png',
+        docs: 'https://www.npmjs.com/package/dotenv',
       },
       {
-        name: 'JWT Auth'
+        name: 'JWT Auth',
+        img: 'https://img.icons8.com/color/512/java-web-token.png',
+        docs: 'https://jwt.io/introduction',
       },
       {
-        name: 'Google OAuth'
+        name: 'Google OAuth',
+        img: 'https://community.cdn.kony.com/sites/default/files/icon-google.png',
+        docs: 'https://developers.google.com/identity/protocols/oauth2',
       },
     ],
   }
