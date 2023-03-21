@@ -45,7 +45,9 @@ function About({ aboutRef }) {
                   :
                   <i className={skill.img}></i>
                   }
-                  <p>{skill.name}</p>
+                  <Link to={skill.docs} target='_blank' className={styles['docs-link']}>
+                    <p>{skill.name}</p>
+                  </Link>
                 </div>
               ))
             ))}

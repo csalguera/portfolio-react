@@ -30,27 +30,33 @@ export const skills = [
     backend: [
       {
         name: 'Node',
-        img: 'devicon-nodejs-plain colored'
+        img: 'devicon-nodejs-plain colored',
+        docs: 'https://nodejs.org/en/docs',
       },
       {
         name: 'Express',
-        img: 'devicon-express-original colored'
+        img: 'devicon-express-original colored',
+        docs: 'https://expressjs.com/',
       },
       {
         name: 'PostgreSQL',
-        img: 'devicon-postgresql-plain colored'
+        img: 'devicon-postgresql-plain colored',
+        docs: 'https://www.postgresql.org/docs/',
       },
       {
         name: 'Sequelize',
-        img: 'devicon-sequelize-plain colored'
+        img: 'devicon-sequelize-plain colored',
+        docs: 'https://sequelize.org/',
       },
       {
         name: 'MongoDB',
-        img: 'devicon-mongodb-plain colored'
+        img: 'devicon-mongodb-plain colored',
+        docs: 'https://www.mongodb.com/docs/',
       },
       {
         name: 'Mongoose',
-        img: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongoose/mongoose.png'
+        img: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongoose/mongoose.png',
+        docs: 'https://mongoosejs.com/docs/',
       },
     ],
     other: [
