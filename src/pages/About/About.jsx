@@ -28,7 +28,12 @@ function About({ aboutRef }) {
             {skills.map(layer => (
                 layer.frontend.map(skill => (
                   <div className={styles["skill-container"]} key={skill.name}>
+                    {skill.name === 'EJS'
+                    ?
+                    <img src={skill.img} alt="" />
+                    :
                     <i className={skill.img}></i>
+                    }
                     <Link to={skill.docs} target='_blank' className={styles['docs-link']}>
                       <p>{skill.name}</p>
                     </Link>

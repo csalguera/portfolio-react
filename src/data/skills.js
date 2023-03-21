@@ -26,6 +26,11 @@ export const skills = [
         img: 'devicon-html5-plain colored',
         docs: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
       },
+      {
+        name: 'EJS',
+        img: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_ejs_icon_130626.png',
+        docs: 'https://ejs.co/',
+      },
     ],
     backend: [
       {
