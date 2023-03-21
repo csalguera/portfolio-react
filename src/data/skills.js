@@ -61,6 +61,11 @@ export const skills = [
     ],
     other: [
       {
+        name: 'NPM',
+        img: 'devicon-npm-original-wordmark colored',
+        docs: 'https://www.npmjs.com/package/npm-docs',
+      },
+      {
         name: 'REST APIs',
         img: 'https://keenethics.com/wp-content/uploads/2022/01/rest-api-1.svg',
         docs: 'https://developer.mozilla.org/en-US/docs/Glossary/REST'
