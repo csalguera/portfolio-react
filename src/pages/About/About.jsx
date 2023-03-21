@@ -49,11 +49,13 @@ function About({ aboutRef }) {
           </div>
           <div className={styles.other}>
             <h3>Other</h3>
-            <p>REST APIs</p>
-            <p>MVC Architecture</p>
-            <p>Environment Variables</p>
-            <p>JWT Auth</p>
-            <p>Google OAuth</p>
+            {skills.map(layer => (
+              layer.other.map(skill => (
+                <div className={styles["skill-container"]} key={skill.name}>
+                  <p>{skill.name}</p>
+                </div>
+              ))
+            ))}
           </div>
         </div>
       </div>

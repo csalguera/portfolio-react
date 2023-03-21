@@ -56,15 +56,16 @@
   padding-left: 24px;
 }
 
-.skills-container p {
-  margin: 8px;
-  font-weight: 550;
-}
-
 .skill-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.skill-container p {
+  margin: 8px;
+  font-weight: 550;
+  text-align: start;
 }
 
 .skill-container i,
