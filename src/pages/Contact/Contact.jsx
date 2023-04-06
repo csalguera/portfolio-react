@@ -52,10 +52,10 @@ function Contact({ contactRef }) {
             </Link>
             {' | '}
             <Link
-            to="/carlos-salguera-resume.pdf"
-            target='_blank'
-            download
-            className={styles["link-tag"]}
+              to="/carlos-salguera-resume.pdf"
+              target='_blank'
+              download
+              className={styles["link-tag"]}
             >
               download
             </Link>
