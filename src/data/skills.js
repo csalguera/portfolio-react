@@ -28,7 +28,7 @@ export const skills = [
       },
       {
         name: 'EJS',
-        img: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_ejs_icon_130626.png',
+        img: 'https://i.imgur.com/HryZXxf.png',
         docs: 'https://ejs.co/',
       },
     ],

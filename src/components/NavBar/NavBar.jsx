@@ -36,7 +36,7 @@ function DrawerAppBar(props) {
       smooth: 'easeInOutQuart',
     })
 
-    // window.history.pushState(null, null, `#`)
+    window.history.pushState(null, null, `#`)
   }
 
   const pascalize = (str) => {
