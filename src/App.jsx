@@ -8,7 +8,7 @@ import Landing from './pages/Landing/Landing'
 import Projects from './pages/Projects/Projects'
 
 // components
-import Nav from './components/Nav/Nav'
+import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
 
 // styles
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <Nav
+      <NavBar
         landingRef={landingRef}
         projectsRef={projectsRef}
         aboutRef={aboutRef}
