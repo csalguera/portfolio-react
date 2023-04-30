@@ -33,8 +33,14 @@ function DrawerAppBar(props) {
     scroller.scrollTo(id, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: 'easeInOutQuart',
     })
+
+    // window.history.pushState(null, null, `#`)
+  }
+
+  const pascalize = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1)
   }
 
   const drawer = (
@@ -47,7 +53,7 @@ function DrawerAppBar(props) {
         {navItems.map((item, idx) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
-              <ListItemText primary={item} />
+              <ListItemText primary={pascalize(item)} />
             </ListItemButton>
           </ListItem>
         ))}
