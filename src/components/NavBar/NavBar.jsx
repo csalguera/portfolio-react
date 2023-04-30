@@ -1,5 +1,6 @@
 // npm packages
 import { useState } from 'react';
+import { animateScroll, scroller } from 'react-scroll';
 
 // mui components
 import AppBar from '@mui/material/AppBar';
@@ -18,7 +19,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['Projects', 'About', 'Contact'];
+const navItems = ['projects', 'about', 'contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -28,30 +29,12 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const {
-    scrollToRef,
-    landingRef,
-    projectsRef,
-    aboutRef,
-    contactRef,
-    handleUrlChange,
-    // url,
-  } = props
-
-  function handleClick(evt) {
-    if (evt.target.textContent === 'CS') {
-      scrollToRef(landingRef)
-      handleUrlChange('/')
-    } else if (evt.target.textContent === 'Projects') {
-      scrollToRef(projectsRef)
-      handleUrlChange('/projects')
-    } else if (evt.target.textContent === 'About') {
-      scrollToRef(aboutRef)
-      handleUrlChange('/about')
-    } else if (evt.target.textContent === 'Contact') {
-      scrollToRef(contactRef)
-      handleUrlChange('/contact')
-    }
+  const scrollToElement = (id) => {
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
   }
 
   const drawer = (
@@ -61,9 +44,9 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding >
-            <ListItemButton sx={{ textAlign: 'center' }}>
+        {navItems.map((item, idx) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -93,13 +76,13 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             style={{ cursor: 'pointer' }}
-            onClick={handleClick}
+            // onClick={handleClick}
           >
             CS
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} onClick={handleClick} sx={{ color: '#fff' }}>
+            {navItems.map((item, idx) => (
+              <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}

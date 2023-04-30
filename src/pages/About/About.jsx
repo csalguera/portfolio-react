@@ -8,7 +8,7 @@ import styles from './About.module.css'
 
 function About({ aboutRef }) {
   return (
-    <main className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
+    <main id='about' className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
       <h1>About</h1>
       <div className={`${styles["about-container"]} ${styles["goal-container"]}`}>
         <Goal />

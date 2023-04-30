@@ -6,7 +6,7 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
 function Projects({ projectsRef }) {
   return (
-    <main className='page-component-container' ref={projectsRef}>
+    <main id="projects" className='page-component-container' ref={projectsRef}>
       <h1>Projects</h1>
       {projects.map(project => (
         <ProjectCard
