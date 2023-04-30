@@ -1,6 +1,6 @@
 // npm packages
 import { useState } from 'react';
-import { animateScroll, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 // mui components
 import AppBar from '@mui/material/AppBar';
@@ -39,7 +39,7 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 2 }} style={{ cursor: 'pointer' }} onClick={() => scrollToElement('landing')}>
         CS
       </Typography>
       <Divider />
@@ -76,7 +76,7 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             style={{ cursor: 'pointer' }}
-            // onClick={handleClick}
+            onClick={() => scrollToElement('landing')}
           >
             CS
           </Typography>
