@@ -26,9 +26,8 @@ const drawerWidth = 240;
 const navItems = ['projects', 'about', 'contact'];
 
 function DrawerAppBar(props) {
-  const { window } = props;
+  const { window, checked, setChecked, setIsDarkPref, handleToggle } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [checked, setChecked] = useState(true)
   const navigate = useNavigate()
 
   const handleDrawerToggle = () => {
@@ -71,7 +70,7 @@ function DrawerAppBar(props) {
       </List>
     </Box>
     <Box sx={{ textAlign: 'center' }}>
-      <ToggleSwitch xs='block' sm='none' checked={checked} setChecked={setChecked} />
+      <ToggleSwitch xs='block' sm='none' checked={checked} setChecked={setChecked} setIsDarkPref={setIsDarkPref} handleToggle={handleToggle} />
     </Box>
     </>
   );
@@ -101,7 +100,7 @@ function DrawerAppBar(props) {
           >
             CS
           </Typography>
-          <ToggleSwitch xs='none' sm='block' checked={checked} setChecked={setChecked} />
+          <ToggleSwitch xs='none' sm='block' checked={checked} setChecked={setChecked} setIsDarkPref={setIsDarkPref} handleToggle={handleToggle} />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, idx) => (
               <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#fff' }}>

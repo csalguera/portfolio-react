@@ -56,40 +56,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 const ToggleSwitch = (props) => {
-  const { xs, sm, checked, setChecked } = props
-  const [isDarkPref, setIsDarkPref] = useState(false)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-
-    const checkDarkPref = () => {
-      if (mediaQuery.matches && document.body.className !== 'dark') {
-        toggleLightDark()
-      }
-    }
-
-    checkDarkPref()
-
-    const handleChange = () => {
-      setIsDarkPref(mediaQuery.matches)
-    }
-
-    mediaQuery.addEventListener("change", handleChange)
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange)
-    }
-  }, [])
-
-  const toggleLightDark = () => {
-    document.body.classList.toggle('dark')
-  }
-
-  const handleToggle = () => {
-    setChecked(!checked)
-    toggleLightDark()
-  }
-
+  const { xs, sm, checked, handleToggle } = props
 
   return (
     <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '', display: { xs: xs, sm: sm } }}>
