@@ -1,6 +1,7 @@
 // npm packages
 import { useState } from 'react';
 import { scroller } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 
 // mui components
 import AppBar from '@mui/material/AppBar';
@@ -24,6 +25,7 @@ const navItems = ['projects', 'about', 'contact'];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate()
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -36,7 +38,11 @@ function DrawerAppBar(props) {
       smooth: 'easeInOutQuart',
     })
 
-    window.history.pushState(null, null, `#`)
+    if (id !== 'landing') {
+      navigate(`${id}`)
+    } else {
+      navigate('')
+    }
   }
 
   const pascalize = (str) => {
