@@ -11,6 +11,8 @@ import Footer from './components/Footer/Footer'
 // styles
 import './App.css'
 
+console.log(window);
+
 function App() {
   return (
     <>

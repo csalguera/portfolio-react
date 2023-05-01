@@ -1,4 +1,4 @@
-// npm packages
+// npm modules
 import { Link } from 'react-router-dom'
 
 // styles

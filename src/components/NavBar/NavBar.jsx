@@ -1,4 +1,4 @@
-// npm packages
+// npm modules
 import { useState } from 'react';
 import { scroller } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';

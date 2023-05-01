@@ -1,4 +1,4 @@
-// npm packages
+// npm modules
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
