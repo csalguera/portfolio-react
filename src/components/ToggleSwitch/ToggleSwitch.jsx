@@ -53,11 +53,16 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 const ToggleSwitch = (props) => {
-  const { xs, sm } = props
+  const { xs, sm, checked, setChecked } = props
+
+  const handleChange = () => {
+    setChecked(!checked)
+  }
+
   return (
     <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '', display: { xs: xs, sm: sm } }}>
       <FormControlLabel
-        control={<MaterialUISwitch defaultChecked color="default" />}
+        control={<MaterialUISwitch checked={checked} onChange={handleChange} color="default" />}
       />
     </FormGroup>
   )
