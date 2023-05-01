@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 // styles
 import styles from './Contact.module.css'
 
-function Contact({ contactRef }) {
+function Contact() {
   return (
-    <main id='contact' className={styles.container} ref={contactRef}>
+    <main id='contact' className={styles.container}>
       <h1>Contact</h1>
       <div className={styles["contact-details"]}>
         <div className={styles.email}>

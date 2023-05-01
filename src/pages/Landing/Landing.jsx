@@ -1,9 +1,9 @@
 // styles
 import styles from './Landing.module.css'
 
-function Landing({ landingRef }) {
+function Landing() {
   return (
-    <main id='landing' ref={landingRef} style={{backgroundColor: '#bababa'}}>
+    <main id='landing' style={{backgroundColor: '#bababa'}}>
       <div className={styles["landing-details"]}>
         <div className={styles.container}>
           <h1>Carlos Salguera</h1>

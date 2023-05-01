@@ -6,9 +6,9 @@ import Journey from '../../components/about/Journey/Journey'
 // styles
 import styles from './About.module.css'
 
-function About({ aboutRef }) {
+function About() {
   return (
-    <main id='about' className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
+    <main id='about' className='page-component-container' style={{backgroundColor: '#bababa'}}>
       <h1>About</h1>
       <div className={`${styles["about-container"]} ${styles["goal-container"]}`}>
         <Goal />
