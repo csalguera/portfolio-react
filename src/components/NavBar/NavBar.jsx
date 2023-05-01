@@ -26,7 +26,17 @@ const drawerWidth = 240;
 const navItems = ['projects', 'about', 'contact'];
 
 function DrawerAppBar(props) {
-  const { window, checked, setChecked, setIsDarkPref, handleToggle } = props;
+  const {
+    window,
+    checked,
+    setChecked,
+    setIsDarkPref,
+    handleToggle,
+    navbarColor,
+    drawerColor,
+    fontColor,
+  } = props;
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate()
 
@@ -53,9 +63,9 @@ function DrawerAppBar(props) {
   }
 
   const drawer = (
-    <Box sx={{ height: '100%' }}>
+    <Box sx={{ height: '100%', background: drawerColor }}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2 }} style={{ cursor: 'pointer' }} onClick={() => scrollToElement('landing')}>
+        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer', color: fontColor }} onClick={() => scrollToElement('landing')}>
           CS
         </Typography>
         <Divider />
@@ -63,7 +73,7 @@ function DrawerAppBar(props) {
           {navItems.map((item, idx) => (
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
-                <ListItemText primary={pascalize(item)} />
+                <ListItemText primary={pascalize(item)} sx={{ color: fontColor }} />
               </ListItemButton>
             </ListItem>
           ))}
@@ -87,7 +97,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{backgroundColor: navbarColor}} >
         <Toolbar>
           <IconButton
             color="inherit"

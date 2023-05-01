@@ -49,10 +49,20 @@ function App() {
     toggleLightDark()
   }
 
+  let navbarColor, drawerColor, fontColor
+
   if (document.body.className === 'dark') {
-    document.body.style.background = 'black'
+    // dark mode
+    document.body.style.background = 'rgb(33, 39, 56)'
+    navbarColor = 'rgb(163, 0, 0)'
+    drawerColor = 'rgb(33, 39, 56)'
+    fontColor = 'rgb(245, 243, 245)'
   } else {
-    document.body.style.background = 'white'
+    // light mode
+    document.body.style.background = 'rgb(245, 243, 245)'
+    navbarColor = 'rgb(16, 152, 247)'
+    drawerColor = 'rgb(245, 243, 245)'
+    fontColor = 'rgb(33, 39, 56)'
   }
 
   return (
@@ -62,6 +72,9 @@ function App() {
         setChecked={setChecked}
         setIsDarkPref={setIsDarkPref}
         handleToggle={handleToggle}
+        navbarColor={navbarColor}
+        drawerColor={drawerColor}
+        fontColor={fontColor}
       />
       <Landing />
       <Projects />
