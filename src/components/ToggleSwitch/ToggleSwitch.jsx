@@ -1,6 +1,3 @@
-// npm modules
-import { useState, useEffect } from 'react';
-
 // mui components
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
