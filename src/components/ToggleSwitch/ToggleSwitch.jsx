@@ -1,3 +1,6 @@
+// npm modules
+import { useState, useEffect } from 'react';
+
 // mui components
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
@@ -54,15 +57,41 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const ToggleSwitch = (props) => {
   const { xs, sm, checked, setChecked } = props
+  const [isDarkPref, setIsDarkPref] = useState(false)
 
-  const handleChange = () => {
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+
+    const checkDarkPref = () => {
+      if (mediaQuery.matches && document.body.className !== 'dark') {
+        toggleLightDark()
+      }
+    }
+
+    checkDarkPref()
+
+    const handleChange = () => {
+      setIsDarkPref(mediaQuery.matches)
+    }
+
+    mediaQuery.addEventListener("change", handleChange)
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange)
+    }
+  }, [])
+
+  const toggleLightDark = () => {
     setChecked(!checked)
+    document.body.classList.toggle('dark')
   }
+
+  console.log(document.body);
 
   return (
     <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '', display: { xs: xs, sm: sm } }}>
       <FormControlLabel
-        control={<MaterialUISwitch checked={checked} onChange={handleChange} color="default" />}
+        control={<MaterialUISwitch checked={checked} onChange={toggleLightDark} color="default" />}
       />
     </FormGroup>
   )
