@@ -53,6 +53,7 @@ function DrawerAppBar(props) {
   }
 
   const drawer = (
+    <>
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }} style={{ cursor: 'pointer' }} onClick={() => scrollToElement('landing')}>
         CS
@@ -68,6 +69,10 @@ function DrawerAppBar(props) {
         ))}
       </List>
     </Box>
+    <Box sx={{ textAlign: 'center' }}>
+      <ToggleSwitch xs='block' sm='none' />
+    </Box>
+    </>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -97,7 +102,7 @@ function DrawerAppBar(props) {
           >
             CS
           </Typography>
-          <ToggleSwitch />
+          <ToggleSwitch xs='none' sm='block' />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, idx) => (
               <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#fff' }}>
