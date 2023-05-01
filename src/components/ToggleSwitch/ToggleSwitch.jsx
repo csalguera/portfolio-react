@@ -82,16 +82,19 @@ const ToggleSwitch = (props) => {
   }, [])
 
   const toggleLightDark = () => {
-    setChecked(!checked)
     document.body.classList.toggle('dark')
   }
 
-  console.log(document.body);
+  const handleToggle = () => {
+    setChecked(!checked)
+    toggleLightDark()
+  }
+
 
   return (
     <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '', display: { xs: xs, sm: sm } }}>
       <FormControlLabel
-        control={<MaterialUISwitch checked={checked} onChange={toggleLightDark} color="default" />}
+        control={<MaterialUISwitch checked={checked} onChange={handleToggle} color="default" />}
       />
     </FormGroup>
   )
