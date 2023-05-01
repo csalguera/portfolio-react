@@ -1,12 +1,3 @@
-.container {
-  margin: 0;
-  padding-top: 6vh;
-  min-height: 88vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .link-tag {
   text-decoration: none;
   color: black;

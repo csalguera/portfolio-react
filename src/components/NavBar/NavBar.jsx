@@ -78,8 +78,6 @@ function DrawerAppBar(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
-  console.log(drawer);
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />

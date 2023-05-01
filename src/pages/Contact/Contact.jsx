@@ -6,7 +6,7 @@ import styles from './Contact.module.css'
 
 function Contact() {
   return (
-    <main id='contact' className={styles.container}>
+    <main id='contact' className='page-component-container'>
       <h1>Contact</h1>
       <div className={styles["contact-details"]}>
         <div className={styles.email}>

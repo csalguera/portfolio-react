@@ -3,7 +3,7 @@ import styles from './Landing.module.css'
 
 function Landing() {
   return (
-    <main id='landing' style={{backgroundColor: '#bababa'}}>
+    <main id='landing'>
       <div className={styles["landing-details"]}>
         <div className={styles.container}>
           <h1>Carlos Salguera</h1>
