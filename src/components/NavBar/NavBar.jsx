@@ -53,26 +53,26 @@ function DrawerAppBar(props) {
   }
 
   const drawer = (
-    <>
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }} style={{ cursor: 'pointer' }} onClick={() => scrollToElement('landing')}>
-        CS
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item, idx) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
-              <ListItemText primary={pascalize(item)} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+    <Box sx={{ height: '100%' }}>
+      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ my: 2 }} style={{ cursor: 'pointer' }} onClick={() => scrollToElement('landing')}>
+          CS
+        </Typography>
+        <Divider />
+        <List>
+          {navItems.map((item, idx) => (
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
+                <ListItemText primary={pascalize(item)} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+      <Box sx={{ textAlign: 'center' }}>
+        <ToggleSwitch xs='block' sm='none' checked={checked} setChecked={setChecked} setIsDarkPref={setIsDarkPref} handleToggle={handleToggle} />
+      </Box>
     </Box>
-    <Box sx={{ textAlign: 'center' }}>
-      <ToggleSwitch xs='block' sm='none' checked={checked} setChecked={setChecked} setIsDarkPref={setIsDarkPref} handleToggle={handleToggle} />
-    </Box>
-    </>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
