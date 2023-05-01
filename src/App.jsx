@@ -57,7 +57,12 @@ function App() {
 
   return (
     <>
-      <NavBar checked={checked} setChecked={setChecked} setIsDarkPref={setIsDarkPref} handleToggle={handleToggle} />
+      <NavBar
+        checked={checked}
+        setChecked={setChecked}
+        setIsDarkPref={setIsDarkPref}
+        handleToggle={handleToggle}
+      />
       <Landing />
       <Projects />
       <About />

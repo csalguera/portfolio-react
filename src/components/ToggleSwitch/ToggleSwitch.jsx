@@ -59,7 +59,7 @@ const ToggleSwitch = (props) => {
   const { xs, sm, checked, handleToggle } = props
 
   return (
-    <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '', display: { xs: xs, sm: sm } }}>
+    <FormGroup sx={{ marginLeft:xs === 'block' ? '30px' : '16px', display: { xs: xs, sm: sm } }}>
       <FormControlLabel
         control={<MaterialUISwitch checked={checked} onChange={handleToggle} color="default" />}
       />
