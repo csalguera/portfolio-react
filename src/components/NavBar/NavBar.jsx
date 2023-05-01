@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { scroller } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 
+// components
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+
 // mui components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -69,6 +72,8 @@ function DrawerAppBar(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  console.log(drawer);
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -92,6 +97,7 @@ function DrawerAppBar(props) {
           >
             CS
           </Typography>
+          <ToggleSwitch />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, idx) => (
               <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#fff' }}>
