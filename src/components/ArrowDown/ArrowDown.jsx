@@ -6,6 +6,7 @@ import ArrowCircleDownSharpIcon from '@mui/icons-material/ArrowCircleDownSharp';
 const ArrowDown = (props) => {
   const {
     id,
+    arrowColor,
     scrollToElement,
   } = props
 
@@ -17,7 +18,7 @@ const ArrowDown = (props) => {
         component="label"
         onClick={() => scrollToElement(id)}
       >
-        <ArrowCircleDownSharpIcon fontSize='large' sx={{ color: 'white' }} />
+        <ArrowCircleDownSharpIcon fontSize='large' sx={{ color: arrowColor }} />
       </IconButton>
     </Box>
   )

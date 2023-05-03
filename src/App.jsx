@@ -101,9 +101,13 @@ function App() {
         fontColor1={fontColor}
         fontColor2={backgroundColor1}
         id={'projects'}
+        arrowColor={fontColor}
         scrollToElement={scrollToElement}
       />
-      <Projects />
+      <Projects
+        fontColor1={fontColor}
+        fontColor2={backgroundColor1}
+      />
       <About />
       <Contact />
       <Footer />

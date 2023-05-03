@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography"
 function Landing(props) {
   const {
     id,
+    arrowColor,
     fontColor1,
     fontColor2,
     scrollToElement,
@@ -38,6 +39,7 @@ function Landing(props) {
       </main>
       <ArrowDown
         id={id}
+        arrowColor={arrowColor}
         scrollToElement={scrollToElement}
       />
     </>

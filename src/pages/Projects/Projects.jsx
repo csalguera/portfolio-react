@@ -4,14 +4,24 @@ import { projects } from '../../data/projects'
 // components
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
-function Projects() {
+// mui components
+import Typography from '@mui/material/Typography'
+
+function Projects(props) {
+  const {
+    fontColor1,
+    fontColor2,
+  } = props
   return (
     <main id="projects" className='page-component-container'>
-      <h1>Projects</h1>
+      <Typography variant="h2" sx={{ color: fontColor1 }}>
+        Projects
+      </Typography>
       {projects.map(project => (
         <ProjectCard
-          project={project}
           key={project.title}
+          project={project}
+          fontColor2={fontColor2}
         />
       ))}
     </main>
