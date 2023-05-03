@@ -1,5 +1,7 @@
 // npm modules
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { scroller } from 'react-scroll'
 
 // page components
 import About from './pages/About/About'
@@ -18,8 +20,23 @@ import './App.css'
 import '@fontsource/roboto'
 
 function App() {
+  const navigate = useNavigate()
   const [checked, setChecked] = useState(false)
   const [isDarkPref, setIsDarkPref] = useState(false)
+
+  const scrollToElement = (id) => {
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    })
+
+    if (id !== 'landing') {
+      navigate(`${id}`)
+    } else {
+      navigate('')
+    }
+  }
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
@@ -52,39 +69,39 @@ function App() {
     toggleLightDark()
   }
 
-  let navbarColor, drawerColor, navbarFontColor
+  let backgroundColor1, backgroundColor2, fontColor
 
   if (document.body.className === 'dark') {
     // Dark Mode
-
-    // NavBar
     document.body.style.background = 'rgb(33, 39, 56)'
-    navbarColor = 'rgb(163, 0, 0)'
-    drawerColor = 'rgb(33, 39, 56)'
-    navbarFontColor = 'rgb(245, 243, 245)'
+    backgroundColor1 = 'rgba(163, 0, 0, 1)'
+    backgroundColor2 = 'rgb(33, 39, 56)'
+    fontColor = 'rgb(245, 243, 245)'
   } else {
     // Light Mode
-
-    // NavBar
     document.body.style.background = 'rgb(245, 243, 245)'
-    navbarColor = 'rgb(16, 152, 247)'
-    drawerColor = 'rgb(245, 243, 245)'
-    navbarFontColor = 'rgb(33, 39, 56)'
+    backgroundColor1 = 'rgba(16, 152, 247, 1)'
+    backgroundColor2 = 'rgb(245, 243, 245)'
+    fontColor = 'rgb(33, 39, 56)'
   }
 
   return (
     <>
       <NavBar
+        scrollToElement={scrollToElement}
         checked={checked}
         setChecked={setChecked}
         setIsDarkPref={setIsDarkPref}
         handleToggle={handleToggle}
-        navbarColor={navbarColor}
-        drawerColor={drawerColor}
-        navbarFontColor={navbarFontColor}
+        backgroundColor1={backgroundColor1}
+        backgroundColor2={backgroundColor2}
+        fontColor={fontColor}
       />
       <Landing
-        fontColor={navbarFontColor}
+        fontColor1={fontColor}
+        fontColor2={backgroundColor1}
+        id={'projects'}
+        scrollToElement={scrollToElement}
       />
       <Projects />
       <About />

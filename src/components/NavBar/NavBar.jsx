@@ -1,7 +1,5 @@
 // npm modules
 import { useState } from 'react';
-import { scroller } from 'react-scroll';
-import { useNavigate } from 'react-router-dom';
 
 // components
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
@@ -28,44 +26,30 @@ const navItems = ['projects', 'about', 'contact'];
 function DrawerAppBar(props) {
   const {
     window,
+    scrollToElement,
     checked,
     setChecked,
     setIsDarkPref,
     handleToggle,
-    navbarColor,
-    drawerColor,
-    navbarFontColor,
+    backgroundColor1,
+    backgroundColor2,
+    fontColor,
   } = props;
 
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navigate = useNavigate()
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
-  const scrollToElement = (id) => {
-    scroller.scrollTo(id, {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    })
-
-    if (id !== 'landing') {
-      navigate(`${id}`)
-    } else {
-      navigate('')
-    }
-  }
 
   const pascalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1)
   }
 
   const drawer = (
-    <Box sx={{ height: '100%', background: drawerColor }}>
+    <Box sx={{ height: '100%', background: backgroundColor2 }}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer', color: navbarFontColor }} onClick={() => scrollToElement('landing')}>
+        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer', color: fontColor }} onClick={() => scrollToElement('landing')}>
           CS
         </Typography>
         <Divider />
@@ -73,7 +57,7 @@ function DrawerAppBar(props) {
           {navItems.map((item, idx) => (
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
-                <ListItemText primary={pascalize(item)} sx={{ color: navbarFontColor }} />
+                <ListItemText primary={pascalize(item)} sx={{ color: fontColor }} />
               </ListItemButton>
             </ListItem>
           ))}
@@ -97,7 +81,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{backgroundColor: navbarColor}} >
+      <AppBar component="nav" sx={{backgroundColor: backgroundColor1}} >
         <Toolbar>
           <IconButton
             color="inherit"
