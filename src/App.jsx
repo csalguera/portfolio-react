@@ -14,6 +14,9 @@ import Footer from './components/Footer/Footer'
 // styles
 import './App.css'
 
+// fonts
+import '@fontsource/roboto'
+
 function App() {
   const [checked, setChecked] = useState(false)
   const [isDarkPref, setIsDarkPref] = useState(false)
