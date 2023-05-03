@@ -34,7 +34,7 @@ function DrawerAppBar(props) {
     handleToggle,
     navbarColor,
     drawerColor,
-    fontColor,
+    navbarFontColor,
   } = props;
 
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,7 +65,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box sx={{ height: '100%', background: drawerColor }}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer', color: fontColor }} onClick={() => scrollToElement('landing')}>
+        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer', color: navbarFontColor }} onClick={() => scrollToElement('landing')}>
           CS
         </Typography>
         <Divider />
@@ -73,7 +73,7 @@ function DrawerAppBar(props) {
           {navItems.map((item, idx) => (
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(navItems[idx])}>
-                <ListItemText primary={pascalize(item)} sx={{ color: fontColor }} />
+                <ListItemText primary={pascalize(item)} sx={{ color: navbarFontColor }} />
               </ListItemButton>
             </ListItem>
           ))}
