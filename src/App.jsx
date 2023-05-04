@@ -108,7 +108,9 @@ function App() {
         fontColor1={fontColor}
         fontColor2={backgroundColor1}
       />
-      <About />
+      <About
+        fontColor1={fontColor}
+      />
       <Contact />
       <Footer />
     </>
