@@ -1,6 +1,3 @@
-// styles
-import styles from './Journey.module.css'
-
 // mui components
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
