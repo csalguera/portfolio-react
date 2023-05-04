@@ -2,6 +2,15 @@
 import { useState } from "react"
 import { send } from 'emailjs-com'
 
+// mui components
+import FormControl from "@mui/material/FormControl";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+
+// environment variables
 const REACT_APP_EMAILJS_PUBLIC_KEY = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
 const REACT_APP_EMAILJS_SERVICE_ID = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`
 const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`
@@ -16,7 +25,7 @@ const EmailForm = () => {
     setToSend({ ...toSend, [e.target.name]: e.target.value })
   }
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     send(
       REACT_APP_EMAILJS_SERVICE_ID,
@@ -37,22 +46,37 @@ const EmailForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        type='text'
-        name='subject'
-        placeholder='Subject'
+    <form
+      autoComplete="off"
+      onSubmit={handleSubmit}
+      style={{ display: 'flex', flexDirection: 'column', minWidth: '600px', marginTop: '5vh' }}
+    >
+      <TextField
+        id="outlined-basic"
+        name="subject"
+        label="Subject"
         value={toSend.subject}
+        variant="outlined"
+        focused
+        inputProps={{ style: { color: 'white' } }}
         onChange={handleChange}
-      />
-      <input
-        type='text'
-        name='message'
-        placeholder='Message'
+        sx={{ mb: 2 }}
+        />
+      <TextField
+        id="outlined-multiline-static"
+        name="message"
+        label="Message"
         value={toSend.message}
+        multiline
+        rows={4}
+        focused
+        inputProps={{ style: { color: 'white' } }}
         onChange={handleChange}
+        sx={{ mb: 2 }}
       />
-      <button type='submit'>Submit</button>
+      <Stack spacing={2} direction="row" sx={{ justifyContent: 'flex-end' }}>
+        <Button type="submit" variant="outlined">Submit</Button>
+      </Stack>
     </form>
   )
 }
