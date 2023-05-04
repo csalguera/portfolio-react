@@ -1,18 +1,34 @@
 // mui components
-import Box from "@mui/material/Box"
 import Link from "@mui/material/Link"
 
 const Skill = ({ skill }) => {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 1 }}>
+    <>
       {skill.devIcon
       ?
-      <i className={skill.devIcon} style={{ fontSize: '30px', marginLeft: '40px' }} ></i>
+      <i
+        className={skill.devIcon}
+        style={{
+          fontSize: '50px',
+          // marginLeft: '40px'
+        }}
+      >
+      </i>
       :
-      <img src={skill.img} alt={skill.name} style={{ width: '30px', height: '30px', marginLeft: '40px' }} />
+      <img
+        src={skill.img}
+        alt={skill.name}
+        style={{
+          width: '50px',
+          height: '50px',
+          objectFit: 'cover',
+          // marginLeft: '40px'
+        }}
+      />
       }
       <Link
-        sx={{ ml: 1, pl: 2 }}
+        // sx={{ ml: 1, pl: 2 }}
+        sx={{ pt: 1, pb: 2 }}
         underline='hover'
         href={skill.docs}
         target='_blank'
@@ -20,7 +36,7 @@ const Skill = ({ skill }) => {
       >
         {skill.name}
       </Link>
-    </Box>
+    </>
   )
 }
 
