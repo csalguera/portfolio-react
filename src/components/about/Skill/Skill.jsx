@@ -12,7 +12,7 @@ const Skill = ({ skill }) => {
       <img src={skill.img} alt={skill.name} style={{ width: '30px', height: '30px' }} />
       }
       <Link
-        sx={{ ml: 1 }}
+        sx={{ ml: 1, pl: 1 }}
         underline='hover'
         href={skill.docs}
         target='_blank'

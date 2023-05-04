@@ -18,75 +18,95 @@ const Skills = (props) => {
       <Typography variant="h4" sx={{ color: fontColor1, pt: '5vh' }}>
         Skills
       </Typography>
-      <Box sx={{ textAlign: 'center', display: 'flex' }}>
-        <Box
-          sx={{
-            pt: '2vh',
-            display: 'flex',
-            flexWrap: 'wrap',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            px: 4
-          }}
-        >
-          <Typography variant="h6" sx={{ color: fontColor1 }}>
+      <Box
+        sx={{
+          textAlign: 'center',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Box>
+          <Typography variant="h6" sx={{ color: fontColor1, mt: 2 }}>
             Frontend
           </Typography>
-          {skills.map(tech => (
-            tech.frontend.map(skill => (
-              <Skill
-                key={skill.name}
-                skill={skill}
-              />
-            ))
-          ))}
+          <Box
+            sx={{
+              minWidth: '300px',
+              pt: '2vh',
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              mx: '1vw',
+              px: 2,
+            }}
+          >
+            {skills.map(tech => (
+              tech.frontend.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
+          </Box>
         </Box>
-        <Box
-          sx={{
-            pt: '2vh',
-            display: 'flex',
-            flexWrap: 'wrap',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            px: 4
-          }}
-        >
-        <Typography variant="h6" sx={{ color: fontColor1 }}>
+        <Box>
+          <Typography variant="h6" sx={{ color: fontColor1, mt: 2 }}>
             Backend
           </Typography>
-          {skills.map(tech => (
-            tech.backend.map(skill => (
-              <Skill
-                key={skill.name}
-                skill={skill}
-              />
-            ))
-          ))}
+          <Box
+            sx={{
+              minWidth: '300px',
+              pt: '2vh',
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              mx: '1vw',
+              px: 2,
+            }}
+          >
+            {skills.map(tech => (
+              tech.backend.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
+          </Box>
         </Box>
-        <Box
-          sx={{
-            pt: '2vh',
-            display: 'flex',
-            flexWrap: 'wrap',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            px: 4
-          }}
-        >
-        <Typography variant="h6" sx={{ color: fontColor1 }}>
+        <Box>
+          <Typography variant="h6" sx={{ color: fontColor1, mt: 2 }}>
             Other
           </Typography>
-          {skills.map(tech => (
-            tech.other.map(skill => (
-              <Skill
-                key={skill.name}
-                skill={skill}
-              />
-            ))
-          ))}
+          <Box
+            sx={{
+              minWidth: '300px',
+              pt: '2vh',
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              mx: '1vw',
+              px: 2,
+            }}
+          >
+            {skills.map(tech => (
+              tech.other.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
+          </Box>
         </Box>
       </Box>
     </>
