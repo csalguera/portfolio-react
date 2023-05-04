@@ -7,12 +7,12 @@ const Skill = ({ skill }) => {
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 1 }}>
       {skill.devIcon
       ?
-      <i className={skill.devIcon} style={{ fontSize: '30px' }} ></i>
+      <i className={skill.devIcon} style={{ fontSize: '30px', marginLeft: '40px' }} ></i>
       :
-      <img src={skill.img} alt={skill.name} style={{ width: '30px', height: '30px' }} />
+      <img src={skill.img} alt={skill.name} style={{ width: '30px', height: '30px', marginLeft: '40px' }} />
       }
       <Link
-        sx={{ ml: 1, pl: 1 }}
+        sx={{ ml: 1, pl: 2 }}
         underline='hover'
         href={skill.docs}
         target='_blank'

@@ -111,7 +111,9 @@ function App() {
       <About
         fontColor1={fontColor}
       />
-      <Contact />
+      <Contact
+        fontColor1={fontColor}
+      />
       <Footer />
     </>
   )
