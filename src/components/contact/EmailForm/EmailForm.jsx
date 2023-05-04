@@ -47,7 +47,7 @@ const EmailForm = () => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      style={{ display: 'flex', flexDirection: 'column', minWidth: '600px', marginTop: '5vh' }}
+      style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '5vh' }}
     >
       <TextField
         id="outlined-basic"
@@ -58,7 +58,7 @@ const EmailForm = () => {
         focused
         inputProps={{ style: { color: 'white' } }}
         onChange={handleChange}
-        sx={{ mb: 2 }}
+        sx={{ mb: 2, width: '50vw', maxWidth: '500px' }}
         />
       <TextField
         id="outlined-multiline-static"
@@ -70,7 +70,7 @@ const EmailForm = () => {
         focused
         inputProps={{ style: { color: 'white' } }}
         onChange={handleChange}
-        sx={{ mb: 2 }}
+        sx={{ mb: 2, width: '50vw', maxWidth: '500px' }}
       />
       <Stack spacing={2} direction="row" sx={{ justifyContent: 'flex-end' }}>
         <Button type="submit" variant="outlined">Submit</Button>
