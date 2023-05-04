@@ -10,7 +10,6 @@ const Skill = ({ skill }) => {
         className={skill.devIcon}
         style={{
           fontSize: '50px',
-          // marginLeft: '40px'
         }}
       >
       </i>
@@ -22,12 +21,10 @@ const Skill = ({ skill }) => {
           width: '50px',
           height: '50px',
           objectFit: 'cover',
-          // marginLeft: '40px'
         }}
       />
       }
       <Link
-        // sx={{ ml: 1, pl: 2 }}
         sx={{ pt: 1, pb: 2 }}
         underline='hover'
         href={skill.docs}

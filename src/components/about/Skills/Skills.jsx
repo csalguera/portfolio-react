@@ -79,7 +79,6 @@ const Skills = (props) => {
         sx={{
           textAlign: 'center',
           display: 'flex',
-          // flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
         }}
