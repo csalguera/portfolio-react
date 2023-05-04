@@ -32,6 +32,9 @@ function About(props) {
       <Goal
         fontColor1={fontColor1}
       />
+      <Skills
+        fontColor1={fontColor1}
+      />
     </main>
   )
 }
