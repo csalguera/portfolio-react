@@ -1,6 +1,3 @@
-// npm modules
-import { useState } from 'react';
-
 // components
 import EmailForm from '../../components/contact/EmailForm/EmailForm'
 import Icons from '../../components/contact/Icons/Icons';
@@ -22,8 +19,8 @@ function Contact(props) {
         src='https://i.imgur.com/Rd1RywH.jpg'
         alt=''
         style={{
-          maxWidth: '300px',
-          maxHeight: '300px',
+          maxWidth: '250px',
+          maxHeight: '250px',
           objectFit: 'cover',
           borderRadius: '50%',
           marginTop: '5vh',
