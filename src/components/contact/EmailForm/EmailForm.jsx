@@ -3,8 +3,6 @@ import { useState } from "react"
 import { send } from 'emailjs-com'
 
 // mui components
-import FormControl from "@mui/material/FormControl";
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
