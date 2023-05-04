@@ -35,6 +35,9 @@ function About(props) {
       <Skills
         fontColor1={fontColor1}
       />
+      <Journey
+        fontColor1={fontColor1}
+      />
     </main>
   )
 }
