@@ -8,6 +8,14 @@ export const projects = [
     technologies: [ 'TypeScript', 'React', 'PostgreSQL', 'Sequelize', 'Vite', 'JWT Auth', 'CSS' ],
   },
   {
+    title: 'Game-Pocket',
+    description: 'A decoupled MERN stack app built with two fellow cohort-mates. Create, join, or delete chatrooms and chat in real-time',
+    image: 'https://camo.githubusercontent.com/04f0c93c97e11bc0175a626e8d1c0dfecab165b77cee6a1659bf361b32414b17/68747470733a2f2f692e696d6775722e636f6d2f5167416d516f592e706e67',
+    repositoryLink: 'https://github.com/csalguera/Game-Pocket-Front-End',
+    deploymentLink: 'https://game-pocket.netlify.app/',
+    technologies: ['React', 'Socket.io', 'JavaScript', 'Node', 'MongoDB', 'CSS'],
+  },
+  {
     title: 'garner',
     description: 'A backend MEN stack app where authenticated users can create, update, or delete collections of their favorite games.',
     image: 'https://i.imgur.com/gP3hltL.png',

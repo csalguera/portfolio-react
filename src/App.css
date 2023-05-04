@@ -5,8 +5,8 @@ img {
 
 .page-component-container {
   margin: 0;
-  padding-top: 6vh;
-  min-height: 94vh;
+  padding-top: 8vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
