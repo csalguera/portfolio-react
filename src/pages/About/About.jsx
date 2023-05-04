@@ -9,6 +9,7 @@ import { Typography } from '@mui/material'
 function About(props) {
   const {
     fontColor1,
+    fontColor2,
   } = props
 
   return (
@@ -21,6 +22,7 @@ function About(props) {
       />
       <Skills
         fontColor1={fontColor1}
+        fontColor2={fontColor2}
       />
       <Journey
         fontColor1={fontColor1}

@@ -1,7 +1,12 @@
 // mui components
 import Link from "@mui/material/Link"
 
-const Skill = ({ skill }) => {
+const Skill = (props) => {
+  const {
+    skill,
+    fontColor2,
+  } = props
+
   return (
     <>
       {skill.devIcon
@@ -25,7 +30,7 @@ const Skill = ({ skill }) => {
       />
       }
       <Link
-        sx={{ pt: 1, pb: 2 }}
+        sx={{ pt: 1, pb: 4, color: fontColor2 }}
         underline='hover'
         href={skill.docs}
         target='_blank'

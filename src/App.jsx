@@ -110,6 +110,7 @@ function App() {
       />
       <About
         fontColor1={fontColor}
+        fontColor2={backgroundColor1}
       />
       <Contact
         fontColor1={fontColor}

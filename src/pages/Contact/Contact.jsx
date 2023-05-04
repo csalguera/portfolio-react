@@ -28,7 +28,7 @@ function Contact(props) {
       />
       <EmailForm
         fontColor1={fontColor1}
-      />
+        />
       <Icons
         fontColor1={fontColor1}
       />

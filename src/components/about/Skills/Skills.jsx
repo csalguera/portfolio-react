@@ -16,6 +16,7 @@ import Tab from '@mui/material/Tab';
 const Skills = (props) => {
   const {
     fontColor1,
+    fontColor2,
   } = props
 
   const [value, setValue] = useState('one');
@@ -110,6 +111,7 @@ const Skills = (props) => {
                   <Skill
                     key={skill.name}
                     skill={skill}
+                    fontColor2={fontColor2}
                   />
                 ))
               ))}
@@ -142,6 +144,7 @@ const Skills = (props) => {
                   <Skill
                     key={skill.name}
                     skill={skill}
+                    fontColor2={fontColor2}
                   />
                 ))
               ))}
@@ -174,6 +177,7 @@ const Skills = (props) => {
                   <Skill
                     key={skill.name}
                     skill={skill}
+                    fontColor2={fontColor2}
                   />
                 ))
               ))}
