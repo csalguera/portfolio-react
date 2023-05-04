@@ -36,12 +36,12 @@ function Landing(props) {
             I am a Software Engineer with a focus on React, JavaScript, TypeScript, PostgreSQL, and MongoDB.
           </Typography>
         </Box>
+        <ArrowDown
+          id={id}
+          arrowColor={arrowColor}
+          scrollToElement={scrollToElement}
+        />
       </main>
-      <ArrowDown
-        id={id}
-        arrowColor={arrowColor}
-        scrollToElement={scrollToElement}
-      />
     </>
   )
 }

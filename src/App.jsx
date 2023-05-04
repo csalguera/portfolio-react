@@ -114,7 +114,7 @@ function App() {
       <Contact
         fontColor1={fontColor}
       />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

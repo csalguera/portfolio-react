@@ -11,7 +11,7 @@ const ArrowDown = (props) => {
   } = props
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', pt: 8 }}>
       <IconButton
         color="primary"
         aria-label="scroll down"
