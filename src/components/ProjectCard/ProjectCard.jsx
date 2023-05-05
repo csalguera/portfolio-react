@@ -22,6 +22,8 @@ const ProjectCard = (props) => {
   const xs = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
   const sm = useMediaQuery(theme.breakpoints.between('sm', 'md'))
   const md = useMediaQuery(theme.breakpoints.between('md', 'lg'))
+  const lg = useMediaQuery(theme.breakpoints.between('lg', 'xl'))
+  const xl = useMediaQuery(theme.breakpoints.up('xl'))
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -45,27 +47,52 @@ const ProjectCard = (props) => {
           alt={project.title}
           onClick={handleClick}
         />
-        {!xs &&
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: 'center',
-            horizontal: 'center',
-          }}
-          transformOrigin={{
-            vertical: 'center',
-            horizontal: 'center',
-          }}
-        >
-          <img
-            src={project.image}
-            alt={project.title}
-            width={ sm ? "600" : md ? "800" : "1200" }
-          />
-        </Popover>
+        {(lg || xl)
+        ?
+          <Popover
+            id={id}
+            open={open}
+            onClose={handleClose}
+            anchorReference='none'
+            sx={{
+              width: '100vw',
+              height: '100vh',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              width={ lg ? "1200" : "1600" }
+            />
+          </Popover>
+        :
+          <Popover
+            id={id}
+            open={open}
+            onClose={handleClose}
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'center',
+              horizontal: 'center',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center',
+            }}
+          >
+            <Link
+              href={project.image}
+              sx={{ cursor: 'pointer', m: 2 }}
+              underline='hover'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Open image
+            </Link>
+          </Popover>
         }
         <CardContent sx={{ height: 180 }}>
           <Typography gutterBottom variant="h5" component="div">
