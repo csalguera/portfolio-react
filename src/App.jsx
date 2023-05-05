@@ -101,7 +101,6 @@ function App() {
           scrollToElement={scrollToElement}
           checked={checked}
           setChecked={setChecked}
-          setIsDarkPref={setIsDarkPref}
           handleToggle={handleToggle}
         />
         <Landing

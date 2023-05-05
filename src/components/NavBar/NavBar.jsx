@@ -29,7 +29,6 @@ function DrawerAppBar(props) {
     scrollToElement,
     checked,
     setChecked,
-    setIsDarkPref,
     handleToggle,
   } = props;
 
@@ -66,7 +65,6 @@ function DrawerAppBar(props) {
           sm='none'
           checked={checked}
           setChecked={setChecked}
-          setIsDarkPref={setIsDarkPref}
           handleToggle={handleToggle}
         />
       </Box>
@@ -100,7 +98,13 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, idx) => (
-              <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#000' }}>
+              <Button
+                key={item}
+                onClick={() => scrollToElement(navItems[idx])}
+                sx={{
+                  color: checked ? '#000' : '#fff'
+                }}
+              >
                 {item}
               </Button>
             ))}
@@ -110,7 +114,6 @@ function DrawerAppBar(props) {
             sm='block'
             checked={checked}
             setChecked={setChecked}
-            setIsDarkPref={setIsDarkPref}
             handleToggle={handleToggle}
           />
         </Toolbar>
