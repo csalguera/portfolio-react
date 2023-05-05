@@ -15,8 +15,8 @@ function Contact() {
         src='https://i.imgur.com/Rd1RywH.jpg'
         alt=''
         style={{
-          maxWidth: '250px',
-          maxHeight: '250px',
+          width: '250px',
+          height: '250px',
           objectFit: 'cover',
           borderRadius: '50%',
           marginTop: '5vh',
