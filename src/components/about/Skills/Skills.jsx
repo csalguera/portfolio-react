@@ -54,17 +54,14 @@ const Skills = () => {
           <Tab
             value="one"
             label="frontend"
-            wrapped
           />
           <Tab
             value="two"
             label="backend"
-            wrapped
           />
           <Tab
             value="three"
             label="other"
-            wrapped
           />
         </Tabs>
       </Box>
