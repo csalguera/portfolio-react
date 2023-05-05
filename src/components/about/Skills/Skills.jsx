@@ -79,58 +79,18 @@ const Skills = () => {
           tabValue='one'
           tech={skills.map(tech => tech.frontend)}
         />
-        {(tabs && value === 'two') || !tabs
-          ?
-          <Box
-            sx={{
-              minWidth: '300px',
-              pt: 4,
-              display: 'flex',
-              flexWrap: 'wrap',
-              flexDirection: 'column',
-              alignItems: 'center',
-              mx: '1vw',
-              px: 2,
-            }}
-          >
-            {skills.map(tech => (
-              tech.backend.map(skill => (
-                <Skill
-                  key={skill.name}
-                  skill={skill}
-                />
-              ))
-            ))}
-          </Box>
-          :
-          ''
-        }
-        {(tabs && value === 'three') || !tabs
-          ?
-          <Box
-            sx={{
-              minWidth: '300px',
-              pt: 4,
-              display: 'flex',
-              flexWrap: 'wrap',
-              flexDirection: 'column',
-              alignItems: 'center',
-              mx: '1vw',
-              px: 2,
-            }}
-          >
-            {skills.map(tech => (
-              tech.other.map(skill => (
-                <Skill
-                  key={skill.name}
-                  skill={skill}
-                />
-              ))
-            ))}
-          </Box>
-          :
-          ''
-        }
+        <SkillContainer
+          tabs={tabs}
+          value={value}
+          tabValue='two'
+          tech={skills.map(tech => tech.backend)}
+        />
+        <SkillContainer
+          tabs={tabs}
+          value={value}
+          tabValue='three'
+          tech={skills.map(tech => tech.other)}
+        />
       </Box>
     </>
   )
