@@ -1,9 +1,17 @@
+// npm modules
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+// import dotenv from 'dotenv'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+// components
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter as Router } from 'react-router-dom'
+
+// styles
+import './index.css'
+
+// dotenv.config()
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

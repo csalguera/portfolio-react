@@ -1,5 +1,7 @@
-// npm packages
-import { useEffect, useRef, useState } from 'react'
+// npm modules
+import { useState, useEffect, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { scroller } from 'react-scroll'
 
 // page components
 import About from './pages/About/About'
@@ -8,80 +10,125 @@ import Landing from './pages/Landing/Landing'
 import Projects from './pages/Projects/Projects'
 
 // components
-import Nav from './components/Nav/Nav'
-import Footer from './components/Footer/Footer'
+import NavBar from './components/NavBar/NavBar'
+// import Footer from './components/Footer/Footer'
+
+// mui components
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { grey, yellow, green } from '@mui/material/colors'
 
 // styles
 import './App.css'
 
+// fonts
+import '@fontsource/roboto'
+
+const darkTheme = createTheme({
+  palette: {
+    primary: {
+      main: yellow[700],
+      contrastText: grey[900],
+    },
+    background: {
+      default: grey[900],
+      paper: grey[800],
+    },
+    text: {
+      primary: grey[100],
+      secondary: grey[900],
+    },
+  },
+})
+
+const lightTheme = createTheme({
+  palette: {
+    primary: {
+      main: green[500],
+      contrastText: grey[100],
+    },
+    background: {
+      default: grey[200],
+      paper: grey[300],
+    },
+    text: {
+      primary: grey[900],
+      secondary: grey[100],
+    },
+  },
+})
+
 function App() {
-  const landingRef = useRef(null)
-  const projectsRef = useRef(null)
-  const aboutRef = useRef(null)
-  const contactRef = useRef(null)
-  const [url, setUrl] = useState('/')
+  const navigate = useNavigate()
+  const [checked, setChecked] = useState(false)
+  const [isDarkPref, setIsDarkPref] = useState(false)
 
-  const handleUrlChange = (newUrl) => {
-    window.history.pushState(null, null, newUrl)
+  if (isDarkPref) {
+    document.body.className = 'dark'
   }
 
-  const scrollToRef = (ref, newUrl) => {
-    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    handleUrlChange(newUrl)
+  const scrollToElement = (id) => {
+    scroller.scrollTo(id, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    })
+
+    if (id !== 'landing') {
+      navigate(`${id}`)
+    } else {
+      navigate('')
+    }
   }
+
+  const toggleLightDark = useCallback(() => {
+    document.body.classList.toggle('dark')
+  }, [])
+
+  const handleToggle = useCallback(() => {
+    setChecked((checked) => !checked)
+    toggleLightDark()
+  }, [setChecked, toggleLightDark])
 
   useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight
-      const scrollPosition = window.scrollY
-      const projectsPosition = (windowHeight * 0.5) * (833 / windowHeight)
-      const aboutPosition = (windowHeight * 2.8) * (833 / windowHeight)
-      const contactPosition = (windowHeight * 4.5) * (833 / windowHeight)
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
-      if (scrollPosition < projectsPosition) {
-        const newUrl = '/'
-        setUrl(newUrl)
-      } else if (scrollPosition > projectsPosition && scrollPosition < aboutPosition) {
-        const newUrl = '/projects'
-        setUrl(newUrl)
-      } else if (scrollPosition > aboutPosition && scrollPosition < contactPosition) {
-        const newUrl = '/about'
-        setUrl(newUrl)
-      } else if (scrollPosition > contactPosition) {
-        const newUrl = '/contact'
-        setUrl(newUrl)
+    const checkDarkPref = () => {
+      if (mediaQuery.matches && document.body.className !== 'dark') {
+        handleToggle()
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    checkDarkPref()
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleChange = () => {
+      setIsDarkPref(mediaQuery.matches)
+    }
+
+    mediaQuery.addEventListener("change", handleChange)
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange)
+    }
+  }, [handleToggle, setIsDarkPref, toggleLightDark])
 
   return (
     <>
-      <Nav
-        landingRef={landingRef}
-        projectsRef={projectsRef}
-        aboutRef={aboutRef}
-        contactRef={contactRef}
-        scrollToRef={scrollToRef}
-        handleUrlChange={handleUrlChange}
-        url={url}
-      />
-      <Landing
-        landingRef={landingRef}
-      />
-      <Projects
-        projectsRef={projectsRef}
-      />
-      <About
-        aboutRef={aboutRef}
-      />
-      <Contact
-        contactRef={contactRef}
-      />
-      <Footer />
+      <ThemeProvider theme={checked ? darkTheme : lightTheme}>
+        <NavBar
+          scrollToElement={scrollToElement}
+          checked={checked}
+          setChecked={setChecked}
+          handleToggle={handleToggle}
+        />
+        <Landing
+          id={'projects'}
+          scrollToElement={scrollToElement}
+        />
+        <Projects />
+        <About />
+        <Contact />
+        {/* <Footer /> */}
+      </ThemeProvider>
     </>
   )
 }

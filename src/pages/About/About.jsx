@@ -3,22 +3,18 @@ import Goal from '../../components/about/Goal/Goal'
 import Skills from '../../components/about/Skills/Skills'
 import Journey from '../../components/about/Journey/Journey'
 
-// styles
-import styles from './About.module.css'
+// mui components
+import { Typography } from '@mui/material'
 
-function About({ aboutRef }) {
+function About() {
   return (
-    <main className='page-component-container' style={{backgroundColor: '#bababa'}} ref={aboutRef}>
-      <h1>About</h1>
-      <div className={`${styles["about-container"]} ${styles["goal-container"]}`}>
-        <Goal />
-      </div>
-      <div className={styles["about-container"]}>
-        <Skills />
-      </div>
-      <div className={styles["about-container"]}>
-        <Journey />
-      </div>
+    <main id='about' className='page-component-container'>
+      <Typography variant="h2">
+        About
+      </Typography>
+      <Goal />
+      <Skills />
+      <Journey />
     </main>
   )
 }

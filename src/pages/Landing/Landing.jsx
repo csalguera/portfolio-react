@@ -1,18 +1,46 @@
-// styles
-import styles from './Landing.module.css'
+// components
+import ArrowDown from "../../components/ArrowDown/ArrowDown"
 
-function Landing({ landingRef }) {
+// mui components
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+
+function Landing(props) {
+  const {
+    id,
+    arrowColor,
+    scrollToElement,
+  } = props
+
   return (
-    <main ref={landingRef} style={{backgroundColor: '#bababa'}}>
-      <div className={styles["landing-details"]}>
-        <div className={styles.container}>
-          <h1>Carlos Salguera</h1>
-          <h2>Fullstack Developer</h2>
-          <img className={styles['landing-img']} src="https://i.imgur.com/Rd1RywH.jpg" alt="" />
-          <h3>TypeScript | PERN | MERN | JavaScript | CSS</h3>
-        </div>
-      </div>
-    </main>
+    <>
+      <main
+        id='landing'
+        className='page-component-container'
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Box sx={{ maxWidth: '700px', textAlign: 'center' }}>
+          <Typography variant="h1">
+            Carlos Salguera
+          </Typography>
+          <Typography variant="h5" sx={{ py: 1 }}>
+            FULL STACK DEVELOPER
+          </Typography>
+          <Typography sx={{ px: 10, py: 1 }}>
+            I am a Software Engineer with a focus on React, JavaScript, TypeScript, PostgreSQL, and MongoDB.
+          </Typography>
+        </Box>
+        <ArrowDown
+          id={id}
+          arrowColor={arrowColor}
+          scrollToElement={scrollToElement}
+        />
+      </main>
+    </>
   )
 }
 

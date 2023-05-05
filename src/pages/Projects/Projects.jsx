@@ -4,16 +4,32 @@ import { projects } from '../../data/projects'
 // components
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
-function Projects({ projectsRef }) {
+// mui components
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+
+function Projects() {
   return (
-    <main className='page-component-container' ref={projectsRef}>
-      <h1>Projects</h1>
-      {projects.map(project => (
-        <ProjectCard
-          project={project}
-          key={project.title}
-        />
-      ))}
+    <main id="projects" className='page-component-container'>
+      <Typography variant="h2">
+        Projects
+      </Typography>
+      <Box
+        sx={{
+          pt: '5vh',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {projects.map(project => (
+          <ProjectCard
+            key={project.title}
+            project={project}
+          />
+        ))}
+      </Box>
     </main>
   )
 }

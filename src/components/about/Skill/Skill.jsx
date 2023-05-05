@@ -1,22 +1,41 @@
-// npm packages
-import { Link } from "react-router-dom"
+// mui components
+import Link from "@mui/material/Link"
 
-// styles
-import styles from './Skill.module.css'
+const Skill = (props) => {
+  const { skill } = props
 
-const Skill = ({ skill }) => {
   return (
-    <div className={styles["skill-container"]} key={skill.name}>
+    <>
       {skill.devIcon
       ?
-      <i className={skill.devIcon}></i>
+      <i
+        className={skill.devIcon}
+        style={{
+          fontSize: '50px',
+        }}
+      >
+      </i>
       :
-      <img src={skill.img} alt="" />
+      <img
+        src={skill.img}
+        alt={skill.name}
+        style={{
+          width: '50px',
+          height: '50px',
+          objectFit: 'cover',
+        }}
+      />
       }
-      <Link to={skill.docs} target='_blank' className={styles['docs-link']}>
-        <p>{skill.name}</p>
+      <Link
+        sx={{ pt: 1, pb: 4 }}
+        underline='hover'
+        href={skill.docs}
+        target='_blank'
+        rel='noreferrer'
+      >
+        {skill.name}
       </Link>
-    </div>
+    </>
   )
 }
 
