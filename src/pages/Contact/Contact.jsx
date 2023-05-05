@@ -1,6 +1,7 @@
 // components
 import EmailForm from '../../components/contact/EmailForm/EmailForm'
 import Icons from '../../components/contact/Icons/Icons';
+import SuccessAlert from '../../components/contact/SuccessAlert/SuccessAlert';
 
 // mui components
 import Typography from '@mui/material/Typography'
@@ -24,6 +25,7 @@ function Contact() {
       />
       <EmailForm />
       <Icons />
+      <SuccessAlert />
     </main>
   )
 }
