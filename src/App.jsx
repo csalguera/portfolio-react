@@ -1,5 +1,5 @@
 // npm modules
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { scroller } from 'react-scroll'
 
@@ -11,7 +11,7 @@ import Projects from './pages/Projects/Projects'
 
 // components
 import NavBar from './components/NavBar/NavBar'
-import Footer from './components/Footer/Footer'
+// import Footer from './components/Footer/Footer'
 
 // styles
 import './App.css'
@@ -42,6 +42,15 @@ function App() {
     }
   }
 
+  const toggleLightDark = useCallback(() => {
+    document.body.classList.toggle('dark')
+  }, [])
+
+  const handleToggle = useCallback(() => {
+    setChecked((checked) => !checked)
+    toggleLightDark()
+  }, [setChecked, toggleLightDark])
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
@@ -62,16 +71,7 @@ function App() {
     return () => {
       mediaQuery.removeEventListener("change", handleChange)
     }
-  }, [])
-
-  const toggleLightDark = () => {
-    document.body.classList.toggle('dark')
-  }
-
-  const handleToggle = () => {
-    setChecked(!checked)
-    toggleLightDark()
-  }
+  }, [handleToggle, setIsDarkPref, toggleLightDark])
 
   let backgroundColor1, backgroundColor2, fontColor
 
