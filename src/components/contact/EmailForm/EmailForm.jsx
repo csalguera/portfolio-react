@@ -6,8 +6,7 @@ import { send } from 'emailjs-com'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { Typography } from "@mui/material";
-
+import Typography from "@mui/material/Typography";
 
 // environment variables
 const REACT_APP_EMAILJS_PUBLIC_KEY = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`

@@ -15,28 +15,28 @@ const Icons = (props) => {
   
   return (
     <Box sx={{ pt: '5vh' }}>
-      <Tooltip title="GitHub">
+      <Tooltip title="GitHub" arrow>
         <IconButton>
           <Link href='https://github.com/csalguera' target='_blank' rel='noreferrer'>
             <GitHubIcon  fontSize='large' sx={{ color: fontColor1 }} />
           </Link>
         </IconButton>
       </Tooltip>
-      <Tooltip title="LinkedIn">
+      <Tooltip title="LinkedIn" arrow>
         <IconButton>
           <Link href='https://www.linkedin.com/in/carlos-salguera/' target='_blank' rel='noreferrer'>
             <LinkedInIcon  fontSize='large' sx={{ color: fontColor1 }} />
           </Link>
         </IconButton>
       </Tooltip>
-      <Tooltip title="Email">
+      <Tooltip title="Email" arrow>
         <IconButton>
           <Link href='mailto:carlos.e.salguera@gmail.com' target='_blank' rel='noreferrer'>
             <EmailIcon  fontSize='large' sx={{ color: fontColor1 }} />
           </Link>
         </IconButton>
       </Tooltip>
-      <Tooltip title="Resume">
+      <Tooltip title="Resume" arrow>
         <IconButton>
           <Link href='/carlos-salguera.pdf' download>
             <InsertDriveFileIcon  fontSize='large' sx={{ color: fontColor1 }} />

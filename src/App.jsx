@@ -24,6 +24,10 @@ function App() {
   const [checked, setChecked] = useState(false)
   const [isDarkPref, setIsDarkPref] = useState(false)
 
+  if (isDarkPref) {
+    document.body.className = 'dark'
+  }
+
   const scrollToElement = (id) => {
     scroller.scrollTo(id, {
       duration: 800,
