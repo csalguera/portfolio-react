@@ -19,9 +19,6 @@ const ProjectCard = (props) => {
   const { project } = props
 
   const theme = useTheme()
-  const xs = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
-  const sm = useMediaQuery(theme.breakpoints.between('sm', 'md'))
-  const md = useMediaQuery(theme.breakpoints.between('md', 'lg'))
   const lg = useMediaQuery(theme.breakpoints.between('lg', 'xl'))
   const xl = useMediaQuery(theme.breakpoints.up('xl'))
   const [anchorEl, setAnchorEl] = useState(null);
