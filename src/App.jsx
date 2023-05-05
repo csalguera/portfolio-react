@@ -15,7 +15,7 @@ import NavBar from './components/NavBar/NavBar'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { grey, yellow } from '@mui/material/colors'
+import { grey, yellow, green, brown, red } from '@mui/material/colors'
 
 // styles
 import './App.css'
@@ -23,7 +23,7 @@ import './App.css'
 // fonts
 import '@fontsource/roboto'
 
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
     primary: {
       main: yellow[700],
@@ -36,6 +36,23 @@ const theme = createTheme({
     text: {
       primary: grey[100],
       secondary: grey[900],
+    },
+  },
+})
+
+const lightTheme = createTheme({
+  palette: {
+    primary: {
+      main: green[500],
+      contrastText: grey[100],
+    },
+    background: {
+      default: grey[200],
+      paper: grey[300],
+    },
+    text: {
+      primary: grey[900],
+      secondary: grey[100],
     },
   },
 })
@@ -96,7 +113,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={checked ? darkTheme : lightTheme}>
         <NavBar
           scrollToElement={scrollToElement}
           checked={checked}
