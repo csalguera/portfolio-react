@@ -5,7 +5,7 @@ import { skills } from "../../../data/skills"
 import { useEffect, useState } from "react"
 
 // components
-import SkillContainer from "../../SkillContainer/SkillContainer"
+import SkillContainer from "../SkillContainer/SkillContainer"
 
 // mui components
 import Box from "@mui/material/Box"

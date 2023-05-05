@@ -1,5 +1,5 @@
 // components
-import Skill from "../about/Skill/Skill"
+import Skill from "../Skill/Skill"
 
 // mui components
 import Box from "@mui/material/Box"
