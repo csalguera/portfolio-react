@@ -76,6 +76,7 @@ const Skills = () => {
         <SkillContainer
           tabs={tabs}
           value={value}
+          tabValue='one'
           tech={skills.map(tech => tech.frontend)}
         />
         {(tabs && value === 'two') || !tabs

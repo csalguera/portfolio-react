@@ -8,12 +8,13 @@ const SkillContainer = (props) => {
   const {
     tabs,
     value,
+    tabValue,
     tech,
   } = props
 
   return (
     <>
-      {(tabs && value === 'one') || !tabs
+      {(tabs && value === tabValue) || !tabs
         ?
         <Box
           style={{
