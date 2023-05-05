@@ -4,7 +4,6 @@ import Link from "@mui/material/Link"
 const Skill = (props) => {
   const {
     skill,
-    fontColor2,
   } = props
 
   return (
@@ -30,7 +29,7 @@ const Skill = (props) => {
       />
       }
       <Link
-        sx={{ pt: 1, pb: 4, color: fontColor2 }}
+        sx={{ pt: 1, pb: 4 }}
         underline='hover'
         href={skill.docs}
         target='_blank'

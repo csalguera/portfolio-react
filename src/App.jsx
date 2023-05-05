@@ -15,7 +15,7 @@ import NavBar from './components/NavBar/NavBar'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors'
+import { red, blue, grey, green } from '@mui/material/colors'
 
 // styles
 import './App.css'
@@ -26,7 +26,10 @@ import '@fontsource/roboto'
 const theme = createTheme({
   palette: {
     primary: {
-      main: red[900]
+      main: blue[500]
+    },
+    secondary: {
+      main: green[100]
     },
   },
 })
