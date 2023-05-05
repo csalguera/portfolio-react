@@ -15,7 +15,7 @@ import NavBar from './components/NavBar/NavBar'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red, blue, grey, green, orange, pink, yellow } from '@mui/material/colors'
+import { grey, yellow } from '@mui/material/colors'
 
 // styles
 import './App.css'
