@@ -112,7 +112,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={!checked ? darkTheme : lightTheme}>
+      <ThemeProvider theme={checked ? darkTheme : lightTheme}>
         <NavBar
           scrollToElement={scrollToElement}
           checked={checked}
