@@ -5,6 +5,7 @@ import { skills } from "../../../data/skills"
 import { useEffect, useState } from "react"
 
 // components
+import SkillContainer from "../../SkillContainer/SkillContainer"
 import Skill from "../Skill/Skill"
 
 // mui components
@@ -72,35 +73,11 @@ const Skills = () => {
           display: 'flex',
         }}
       >
-        {(tabs && value === 'one') || !tabs
-          ?
-          <Box
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-            sx={{
-              minWidth: '300px',
-              pt: 4,
-              mx: '1vw',
-              px: 2,
-              display: { md: 'none' }
-            }}
-          >
-            {skills.map(tech => (
-              tech.frontend.map(skill => (
-                <Skill
-                  key={skill.name}
-                  skill={skill}
-                />
-              ))
-            ))}
-          </Box>
-          :
-          ''
-        }
+        <SkillContainer
+          tabs={tabs}
+          value={value}
+          tech={skills.map(tech => tech.frontend)}
+        />
         {(tabs && value === 'two') || !tabs
           ?
           <Box
