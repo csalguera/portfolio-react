@@ -40,7 +40,7 @@ const Skills = () => {
 
   return (
     <>
-      <Typography variant="h4" sx={{ pt: '5vh' }}>
+      <Typography variant="h4" sx={{  pt: '5vh' }}>
         Skills
       </Typography>
 
@@ -49,17 +49,18 @@ const Skills = () => {
           value={value}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
+          textColor="primary.main"
         >
           <Tab
             value="one"
             label="frontend"
             wrapped
-            />
+          />
           <Tab
             value="two"
             label="backend"
             wrapped
-            />
+          />
           <Tab
             value="three"
             label="other"
@@ -78,99 +79,84 @@ const Skills = () => {
       >
         {(tabs && value === 'one') || !tabs
           ?
-          <Box>
-            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
-              Frontend
-            </Typography>
-            <Box
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              sx={{
-                minWidth: '300px',
-                pt: '2vh',
-                mx: '1vw',
-                px: 2,
-                display: { md: 'none' }
-              }}
-            >
-              {skills.map(tech => (
-                tech.frontend.map(skill => (
-                  <Skill
-                    key={skill.name}
-                    skill={skill}
-                  />
-                ))
-              ))}
-            </Box>
+          <Box
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            sx={{
+              minWidth: '300px',
+              pt: 4,
+              mx: '1vw',
+              px: 2,
+              display: { md: 'none' }
+            }}
+          >
+            {skills.map(tech => (
+              tech.frontend.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
           </Box>
           :
           ''
         }
         {(tabs && value === 'two') || !tabs
           ?
-          <Box>
-            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
-              Backend
-            </Typography>
-            <Box
-              sx={{
-                minWidth: '300px',
-                pt: '2vh',
-                display: 'flex',
-                flexWrap: 'wrap',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                mx: '1vw',
-                px: 2,
-              }}
-            >
-              {skills.map(tech => (
-                tech.backend.map(skill => (
-                  <Skill
-                    key={skill.name}
-                    skill={skill}
-                  />
-                ))
-              ))}
-            </Box>
+          <Box
+            sx={{
+              minWidth: '300px',
+              pt: 4,
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              mx: '1vw',
+              px: 2,
+            }}
+          >
+            {skills.map(tech => (
+              tech.backend.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
           </Box>
           :
           ''
         }
         {(tabs && value === 'three') || !tabs
           ?
-          <Box>
-            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
-              Other
-            </Typography>
-            <Box
-              sx={{
-                minWidth: '300px',
-                pt: '2vh',
-                display: 'flex',
-                flexWrap: 'wrap',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                mx: '1vw',
-                px: 2,
-              }}
-            >
-              {skills.map(tech => (
-                tech.other.map(skill => (
-                  <Skill
-                    key={skill.name}
-                    skill={skill}
-                  />
-                ))
-              ))}
-            </Box>
+          <Box
+            sx={{
+              minWidth: '300px',
+              pt: 4,
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              mx: '1vw',
+              px: 2,
+            }}
+          >
+            {skills.map(tech => (
+              tech.other.map(skill => (
+                <Skill
+                  key={skill.name}
+                  skill={skill}
+                />
+              ))
+            ))}
           </Box>
           :
           ''

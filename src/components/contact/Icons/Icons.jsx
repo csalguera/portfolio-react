@@ -13,28 +13,47 @@ const Icons = () => {
     <Box sx={{ pt: '5vh' }}>
       <Tooltip title="GitHub" arrow>
         <IconButton>
-          <Link href='https://github.com/csalguera' target='_blank' rel='noreferrer'>
+          <Link
+            href='https://github.com/csalguera'
+            target='_blank'
+            rel='noreferrer'
+            color="text.primary"
+          >
             <GitHubIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="LinkedIn" arrow>
         <IconButton>
-          <Link href='https://www.linkedin.com/in/carlos-salguera/' target='_blank' rel='noreferrer'>
+          <Link
+            href='https://www.linkedin.com/in/carlos-salguera/'
+            target='_blank'
+            rel='noreferrer'
+            color="text.primary"
+          >
             <LinkedInIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="Email" arrow>
         <IconButton>
-          <Link href='mailto:carlos.e.salguera@gmail.com' target='_blank' rel='noreferrer'>
+          <Link
+            href='mailto:carlos.e.salguera@gmail.com'
+            target='_blank'
+            rel='noreferrer'
+            color="text.primary"
+          >
             <EmailIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="Resume" arrow>
         <IconButton>
-          <Link href='/carlos-salguera.pdf' download>
+          <Link
+            href='/carlos-salguera.pdf'
+            download
+            color="text.primary"
+          >
             <InsertDriveFileIcon  fontSize='large'/>
           </Link>
         </IconButton>

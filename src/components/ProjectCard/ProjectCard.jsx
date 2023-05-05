@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
   const { project } = props
 
   return (
-    <Card sx={{ maxWidth: 345, mx: '2vw', mb: 4 }} variant='outlined'>
+    <Card sx={{ maxWidth: 400, mx: '2vw', mb: 4 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -22,7 +22,7 @@ const ProjectCard = (props) => {
           <Typography gutterBottom variant="h5" component="div">
             {project.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.primary">
             {project.description}
           </Typography>
         </CardContent>
@@ -34,7 +34,8 @@ const ProjectCard = (props) => {
             underline='hover'
             target='_blank'
             rel='noreferrer'
-          >
+            color="primary"
+            >
             GitHub
           </Link>
         </Button>
@@ -44,6 +45,7 @@ const ProjectCard = (props) => {
             underline='hover'
             target='_blank'
             rel='noreferrer'
+            color="primary"
           >
             Live App
           </Link>

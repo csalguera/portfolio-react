@@ -2,9 +2,7 @@
 import Link from "@mui/material/Link"
 
 const Skill = (props) => {
-  const {
-    skill,
-  } = props
+  const { skill } = props
 
   return (
     <>

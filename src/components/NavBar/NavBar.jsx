@@ -100,7 +100,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, idx) => (
-              <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#fff' }}>
+              <Button key={item} onClick={() => scrollToElement(navItems[idx])} sx={{ color: '#000' }}>
                 {item}
               </Button>
             ))}
