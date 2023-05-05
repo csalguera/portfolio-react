@@ -21,7 +21,7 @@ export const projects = [
     image: 'https://i.imgur.com/gP3hltL.png',
     repositoryLink: 'https://github.com/csalguera/garner',
     deploymentLink: 'https://garner-game-collector.fly.dev/',
-    technologies: [ 'MongoDB', 'Mongoose', 'Express', 'Node', 'JavaScript', 'EJS', 'Google OAuth', 'CSS' ],
+    technologies: [ 'MongoDB', 'Mongoose', 'Express', 'Node', 'EJS', 'Google OAuth' ],
   },
   {
     title: 'Connect Four',

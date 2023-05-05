@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions } from '@mui/material';
 
 const ProjectCard = (props) => {
   const { project } = props
@@ -22,6 +22,13 @@ const ProjectCard = (props) => {
           <Typography gutterBottom variant="h5" component="div">
             {project.title}
           </Typography>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', py: 1 }}>
+            {project.technologies.map(technology => (
+              <Typography sx={{ px: 0.5, pb: 1, fontSize: '12px' }} color="primary">
+                {technology}
+              </Typography>
+            ))}
+          </Box>
           <Typography variant="body2" color="text.primary">
             {project.description}
           </Typography>
