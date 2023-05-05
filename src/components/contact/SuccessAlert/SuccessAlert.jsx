@@ -16,6 +16,8 @@ const SuccessAlert = () => {
       <Alert
         onClose={() => {}}
         sx={{ minWidth: '200px' }}
+        variant='filled'
+        color='primary'
       >
         Email sent!
       </Alert>
