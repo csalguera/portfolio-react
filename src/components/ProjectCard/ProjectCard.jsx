@@ -14,11 +14,11 @@ const ProjectCard = (props) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image={project.image}
           alt={project.title}
         />
-        <CardContent>
+        <CardContent sx={{ height: 180 }}>
           <Typography gutterBottom variant="h5" component="div">
             {project.title}
           </Typography>
