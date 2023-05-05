@@ -14,7 +14,7 @@ import NavBar from './components/NavBar/NavBar'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { grey, yellow, green } from '@mui/material/colors'
+import { grey, yellow, indigo } from '@mui/material/colors'
 
 // styles
 import './App.css'
@@ -42,7 +42,7 @@ const darkTheme = createTheme({
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: green[500],
+      main: indigo[400],
       contrastText: grey[100],
     },
     background: {
@@ -112,7 +112,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={checked ? darkTheme : lightTheme}>
+      <ThemeProvider theme={!checked ? darkTheme : lightTheme}>
         <NavBar
           scrollToElement={scrollToElement}
           checked={checked}
