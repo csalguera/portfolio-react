@@ -13,11 +13,23 @@ import Projects from './pages/Projects/Projects'
 import NavBar from './components/NavBar/NavBar'
 // import Footer from './components/Footer/Footer'
 
+// mui components
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors'
+
 // styles
 import './App.css'
 
 // fonts
 import '@fontsource/roboto'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: red[900]
+    },
+  },
+})
 
 function App() {
   const navigate = useNavigate()
@@ -91,35 +103,37 @@ function App() {
 
   return (
     <>
-      <NavBar
-        scrollToElement={scrollToElement}
-        checked={checked}
-        setChecked={setChecked}
-        setIsDarkPref={setIsDarkPref}
-        handleToggle={handleToggle}
-        backgroundColor1={backgroundColor1}
-        backgroundColor2={backgroundColor2}
-        fontColor={fontColor}
-      />
-      <Landing
-        fontColor1={fontColor}
-        fontColor2={backgroundColor1}
-        id={'projects'}
-        arrowColor={fontColor}
-        scrollToElement={scrollToElement}
-      />
-      <Projects
-        fontColor1={fontColor}
-        fontColor2={backgroundColor1}
-      />
-      <About
-        fontColor1={fontColor}
-        fontColor2={backgroundColor1}
-      />
-      <Contact
-        fontColor1={fontColor}
-      />
-      {/* <Footer /> */}
+      <ThemeProvider theme={theme}>
+        <NavBar
+          scrollToElement={scrollToElement}
+          checked={checked}
+          setChecked={setChecked}
+          setIsDarkPref={setIsDarkPref}
+          handleToggle={handleToggle}
+          backgroundColor1={backgroundColor1}
+          backgroundColor2={backgroundColor2}
+          fontColor={fontColor}
+        />
+        <Landing
+          fontColor1={fontColor}
+          fontColor2={backgroundColor1}
+          id={'projects'}
+          arrowColor={fontColor}
+          scrollToElement={scrollToElement}
+        />
+        <Projects
+          fontColor1={fontColor}
+          fontColor2={backgroundColor1}
+        />
+        <About
+          fontColor1={fontColor}
+          fontColor2={backgroundColor1}
+        />
+        <Contact
+          fontColor1={fontColor}
+        />
+        {/* <Footer /> */}
+      </ThemeProvider>
     </>
   )
 }
