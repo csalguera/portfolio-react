@@ -50,7 +50,7 @@ const Icons = () => {
       <Tooltip title="Resume" arrow>
         <IconButton>
           <Link
-            href='/carlos-salguera.pdf'
+            href='/carlos-salguera-resume.pdf'
             download
             color="text.primary"
           >
