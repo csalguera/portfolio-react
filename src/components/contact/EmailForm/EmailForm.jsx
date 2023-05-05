@@ -72,6 +72,7 @@ const EmailForm = () => {
           focused
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          required
           />
         <TextField
           id="outlined-basic"
@@ -82,6 +83,7 @@ const EmailForm = () => {
           focused
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          required
           />
         <TextField
           id="outlined-basic"
@@ -92,6 +94,7 @@ const EmailForm = () => {
           focused
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          required
           />
         <TextField
           id="outlined-multiline-static"
@@ -103,6 +106,7 @@ const EmailForm = () => {
           focused
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          required
         />
         <Stack spacing={2} direction="row" sx={{ justifyContent: 'flex-end' }}>
           <Button type="submit" variant="outlined">Submit</Button>
