@@ -8,38 +8,34 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import EmailIcon from '@mui/icons-material/Email';
 
-const Icons = (props) => {
-  const {
-    fontColor1,
-  } = props
-  
+const Icons = () => {
   return (
     <Box sx={{ pt: '5vh' }}>
       <Tooltip title="GitHub" arrow>
         <IconButton>
           <Link href='https://github.com/csalguera' target='_blank' rel='noreferrer'>
-            <GitHubIcon  fontSize='large' sx={{ color: fontColor1 }} />
+            <GitHubIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="LinkedIn" arrow>
         <IconButton>
           <Link href='https://www.linkedin.com/in/carlos-salguera/' target='_blank' rel='noreferrer'>
-            <LinkedInIcon  fontSize='large' sx={{ color: fontColor1 }} />
+            <LinkedInIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="Email" arrow>
         <IconButton>
           <Link href='mailto:carlos.e.salguera@gmail.com' target='_blank' rel='noreferrer'>
-            <EmailIcon  fontSize='large' sx={{ color: fontColor1 }} />
+            <EmailIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>
       <Tooltip title="Resume" arrow>
         <IconButton>
           <Link href='/carlos-salguera.pdf' download>
-            <InsertDriveFileIcon  fontSize='large' sx={{ color: fontColor1 }} />
+            <InsertDriveFileIcon  fontSize='large'/>
           </Link>
         </IconButton>
       </Tooltip>

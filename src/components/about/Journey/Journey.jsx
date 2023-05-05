@@ -2,18 +2,14 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
-const Journey = (props) => {
-  const {
-    fontColor1,
-  } = props
+const Journey = () => {
   return (
     <Box sx={{ textAlign: 'center', maxWidth: '800px' }}>
-      <Typography variant="h4" sx={{ color: fontColor1, pt: '5vh' }}>
+      <Typography variant="h4" sx={{ pt: '5vh' }}>
         Journey
       </Typography>
       <Typography
         sx={{
-          color: fontColor1,
           pt: 2,
           px: 8,
           textAlign: 'left',

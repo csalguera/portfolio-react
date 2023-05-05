@@ -13,11 +13,7 @@ import Typography from "@mui/material/Typography"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-const Skills = (props) => {
-  const {
-    fontColor1,
-  } = props
-
+const Skills = () => {
   const [value, setValue] = useState('one');
   const [tabs, setTabs] = useState(false)
 
@@ -44,7 +40,7 @@ const Skills = (props) => {
 
   return (
     <>
-      <Typography variant="h4" sx={{ color: fontColor1, pt: '5vh' }}>
+      <Typography variant="h4" sx={{ pt: '5vh' }}>
         Skills
       </Typography>
 
@@ -58,19 +54,16 @@ const Skills = (props) => {
             value="one"
             label="frontend"
             wrapped
-            sx={{ color: fontColor1 }}
             />
           <Tab
             value="two"
             label="backend"
             wrapped
-            sx={{ color: fontColor1 }}
             />
           <Tab
             value="three"
             label="other"
             wrapped
-            sx={{ color: fontColor1 }}
           />
         </Tabs>
       </Box>
@@ -86,7 +79,7 @@ const Skills = (props) => {
         {(tabs && value === 'one') || !tabs
           ?
           <Box>
-            <Typography variant="h6" sx={{ color: fontColor1, mt: 2, display: { xs: 'none', md: 'block' } }}>
+            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
               Frontend
             </Typography>
             <Box
@@ -121,7 +114,7 @@ const Skills = (props) => {
         {(tabs && value === 'two') || !tabs
           ?
           <Box>
-            <Typography variant="h6" sx={{ color: fontColor1, mt: 2, display: { xs: 'none', md: 'block' } }}>
+            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
               Backend
             </Typography>
             <Box
@@ -153,7 +146,7 @@ const Skills = (props) => {
         {(tabs && value === 'three') || !tabs
           ?
           <Box>
-            <Typography variant="h6" sx={{ color: fontColor1, mt: 2, display: { xs: 'none', md: 'block' } }}>
+            <Typography variant="h6" sx={{ mt: 2, display: { xs: 'none', md: 'block' } }}>
               Other
             </Typography>
             <Box

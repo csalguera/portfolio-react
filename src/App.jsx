@@ -15,7 +15,7 @@ import NavBar from './components/NavBar/NavBar'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red, blue, grey, green } from '@mui/material/colors'
+import { red, blue, grey, green, orange, pink } from '@mui/material/colors'
 
 // styles
 import './App.css'
@@ -26,11 +26,14 @@ import '@fontsource/roboto'
 const theme = createTheme({
   palette: {
     primary: {
-      main: blue[500]
+      main: red[500],
     },
-    secondary: {
-      main: green[100]
+    background: {
+      default: grey[900],
     },
+    text: {
+      primary: orange[300],
+    }
   },
 })
 
@@ -90,19 +93,19 @@ function App() {
 
   let backgroundColor1, backgroundColor2, fontColor
 
-  if (document.body.className === 'dark') {
-    // Dark Mode
-    document.body.style.background = 'rgb(33, 39, 56)'
-    backgroundColor1 = 'rgba(163, 0, 0, 1)'
-    backgroundColor2 = 'rgb(33, 39, 56)'
-    fontColor = 'rgb(245, 243, 245)'
-  } else {
-    // Light Mode
-    document.body.style.background = 'rgb(245, 243, 245)'
-    backgroundColor1 = 'rgba(16, 152, 247, 1)'
-    backgroundColor2 = 'rgb(245, 243, 245)'
-    fontColor = 'rgb(33, 39, 56)'
-  }
+  // if (document.body.className === 'dark') {
+  //   // Dark Mode
+  //   document.body.style.background = 'rgb(33, 39, 56)'
+  //   backgroundColor1 = 'rgba(163, 0, 0, 1)'
+  //   backgroundColor2 = 'rgb(33, 39, 56)'
+  //   fontColor = 'rgb(245, 243, 245)'
+  // } else {
+  //   // Light Mode
+  //   document.body.style.background = 'rgb(245, 243, 245)'
+  //   backgroundColor1 = 'rgba(16, 152, 247, 1)'
+  //   backgroundColor2 = 'rgb(245, 243, 245)'
+  //   fontColor = 'rgb(33, 39, 56)'
+  // }
 
   return (
     <>
@@ -118,17 +121,9 @@ function App() {
           id={'projects'}
           scrollToElement={scrollToElement}
         />
-        <Projects
-          fontColor1={fontColor}
-          fontColor2={backgroundColor1}
-        />
-        <About
-          fontColor1={fontColor}
-          fontColor2={backgroundColor1}
-        />
-        <Contact
-          fontColor1={fontColor}
-        />
+        <Projects />
+        <About />
+        <Contact />
         {/* <Footer /> */}
       </ThemeProvider>
     </>

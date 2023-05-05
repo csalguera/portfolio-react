@@ -13,11 +13,7 @@ const REACT_APP_EMAILJS_PUBLIC_KEY = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY
 const REACT_APP_EMAILJS_SERVICE_ID = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`
 const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`
 
-const EmailForm = (props) => {
-  const {
-    fontColor1,
-  } = props
-
+const EmailForm = () => {
   const [toSend, setToSend] = useState({
     name: '',
     email: '',
@@ -53,7 +49,7 @@ const EmailForm = (props) => {
 
   return (
     <>
-      <Typography variant="h5" sx={{ color: fontColor1, mt: 8 }}>
+      <Typography variant="h5" sx={{ mt: 8 }}>
         Email
       </Typography>
       <form
@@ -74,7 +70,6 @@ const EmailForm = (props) => {
           value={toSend.name}
           variant="outlined"
           focused
-          inputProps={{ style: { color: 'white' } }}
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
           />
@@ -85,7 +80,6 @@ const EmailForm = (props) => {
           value={toSend.email}
           variant="outlined"
           focused
-          inputProps={{ style: { color: 'white' } }}
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
           />
@@ -96,7 +90,6 @@ const EmailForm = (props) => {
           value={toSend.subject}
           variant="outlined"
           focused
-          inputProps={{ style: { color: 'white' } }}
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
           />
@@ -108,7 +101,6 @@ const EmailForm = (props) => {
           multiline
           rows={4}
           focused
-          inputProps={{ style: { color: 'white' } }}
           onChange={handleChange}
           sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
         />

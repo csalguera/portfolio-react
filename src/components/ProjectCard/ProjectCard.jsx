@@ -7,10 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const ProjectCard = (props) => {
-  const {
-    project,
-    fontColor2,
-  } = props
+  const { project } = props
 
   return (
     <Card sx={{ maxWidth: 345, mx: '2vw', mb: 4 }} variant='outlined'>
@@ -31,24 +28,22 @@ const ProjectCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small">
           <Link
             href={project.repositoryLink}
             underline='hover'
             target='_blank'
             rel='noreferrer'
-            color={fontColor2}
           >
             GitHub
           </Link>
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small">
           <Link
             href={project.deploymentLink}
             underline='hover'
             target='_blank'
             rel='noreferrer'
-            color={fontColor2}
           >
             Live App
           </Link>

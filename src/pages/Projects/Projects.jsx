@@ -8,15 +8,10 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
-function Projects(props) {
-  const {
-    fontColor1,
-    fontColor2,
-  } = props
-
+function Projects() {
   return (
     <main id="projects" className='page-component-container'>
-      <Typography variant="h2" sx={{ color: fontColor1 }}>
+      <Typography variant="h2">
         Projects
       </Typography>
       <Box
@@ -32,7 +27,6 @@ function Projects(props) {
           <ProjectCard
             key={project.title}
             project={project}
-            fontColor2={fontColor2}
           />
         ))}
       </Box>

@@ -6,27 +6,15 @@ import Journey from '../../components/about/Journey/Journey'
 // mui components
 import { Typography } from '@mui/material'
 
-function About(props) {
-  const {
-    fontColor1,
-    fontColor2,
-  } = props
-
+function About() {
   return (
     <main id='about' className='page-component-container'>
-      <Typography variant="h2" sx={{ color: fontColor1 }}>
+      <Typography variant="h2">
         About
       </Typography>
-      <Goal
-        fontColor1={fontColor1}
-      />
-      <Skills
-        fontColor1={fontColor1}
-        fontColor2={fontColor2}
-      />
-      <Journey
-        fontColor1={fontColor1}
-      />
+      <Goal />
+      <Skills />
+      <Journey />
     </main>
   )
 }

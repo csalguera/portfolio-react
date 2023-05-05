@@ -5,14 +5,10 @@ import Icons from '../../components/contact/Icons/Icons';
 // mui components
 import Typography from '@mui/material/Typography'
 
-function Contact(props) {
-  const {
-    fontColor1,
-  } = props
-
+function Contact() {
   return (
     <main id='contact' className='page-component-container'>
-      <Typography variant="h2" sx={{ color: fontColor1 }}>
+      <Typography variant="h2">
         Contact
       </Typography>
       <img
@@ -26,12 +22,8 @@ function Contact(props) {
           marginTop: '5vh',
         }}
       />
-      <EmailForm
-        fontColor1={fontColor1}
-        />
-      <Icons
-        fontColor1={fontColor1}
-      />
+      <EmailForm />
+      <Icons />
     </main>
   )
 }
