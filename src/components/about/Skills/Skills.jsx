@@ -49,7 +49,7 @@ const Skills = () => {
           value={value}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
-          textColor="primary"
+          textColor="inherit"
         >
           <Tab
             value="one"
