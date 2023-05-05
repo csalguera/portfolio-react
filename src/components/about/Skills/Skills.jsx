@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 
 // components
 import SkillContainer from "../../SkillContainer/SkillContainer"
-import Skill from "../Skill/Skill"
 
 // mui components
 import Box from "@mui/material/Box"
@@ -44,7 +43,6 @@ const Skills = () => {
       <Typography variant="h4" sx={{  pt: '5vh' }}>
         Skills
       </Typography>
-
       <Box sx={{ pt: 4, display: {sm: 'block', md: 'none'} }}>
         <Tabs
           value={value}
@@ -66,7 +64,6 @@ const Skills = () => {
           />
         </Tabs>
       </Box>
-
       <Box
         sx={{
           textAlign: 'center',
