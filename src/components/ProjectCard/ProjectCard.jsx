@@ -12,10 +12,16 @@ import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import Popover from '@mui/material/Popover';
+import { useTheme } from '@emotion/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ProjectCard = (props) => {
   const { project } = props
 
+  const theme = useTheme()
+  const xs = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
+  const sm = useMediaQuery(theme.breakpoints.between('sm', 'md'))
+  const md = useMediaQuery(theme.breakpoints.between('md', 'lg'))
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -39,6 +45,7 @@ const ProjectCard = (props) => {
           alt={project.title}
           onClick={handleClick}
         />
+        {!xs &&
         <Popover
           id={id}
           open={open}
@@ -56,9 +63,10 @@ const ProjectCard = (props) => {
           <img
             src={project.image}
             alt={project.title}
-            width="800px"
+            width={ sm ? "600" : md ? "800" : "1200" }
           />
         </Popover>
+        }
         <CardContent sx={{ height: 180 }}>
           <Typography gutterBottom variant="h5" component="div">
             {project.title}
