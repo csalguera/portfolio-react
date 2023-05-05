@@ -11,7 +11,6 @@ import Projects from './pages/Projects/Projects'
 
 // components
 import NavBar from './components/NavBar/NavBar'
-// import Footer from './components/Footer/Footer'
 
 // mui components
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -127,7 +126,6 @@ function App() {
         <Projects />
         <About />
         <Contact />
-        {/* <Footer /> */}
       </ThemeProvider>
     </>
   )
