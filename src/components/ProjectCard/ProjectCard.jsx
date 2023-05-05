@@ -24,7 +24,14 @@ const ProjectCard = (props) => {
           </Typography>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', py: 1 }}>
             {project.technologies.map(technology => (
-              <Typography sx={{ px: 0.5, pb: 1, fontSize: '12px' }} color="primary">
+              <Typography
+                key={technology}
+                sx={{
+                  px: 0.5, pb: 1,
+                  fontSize: '12px'
+                }}
+                color="primary"
+              >
                 {technology}
               </Typography>
             ))}

@@ -49,7 +49,7 @@ const EmailForm = () => {
 
   return (
     <>
-      <Typography variant="h5" sx={{ mt: 8 }}>
+      <Typography variant="h5" sx={{ mt: '8vh' }}>
         Email
       </Typography>
       <form
