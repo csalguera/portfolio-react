@@ -70,8 +70,6 @@ const Skills = () => {
         sx={{
           textAlign: 'center',
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
         }}
       >
         {(tabs && value === 'one') || !tabs
@@ -81,7 +79,6 @@ const Skills = () => {
               display: 'flex',
               flexWrap: 'wrap',
               flexDirection: 'column',
-              justifyContent: 'center',
               alignItems: 'center',
             }}
             sx={{
@@ -113,7 +110,6 @@ const Skills = () => {
               display: 'flex',
               flexWrap: 'wrap',
               flexDirection: 'column',
-              justifyContent: 'center',
               alignItems: 'center',
               mx: '1vw',
               px: 2,
@@ -140,7 +136,6 @@ const Skills = () => {
               display: 'flex',
               flexWrap: 'wrap',
               flexDirection: 'column',
-              justifyContent: 'center',
               alignItems: 'center',
               mx: '1vw',
               px: 2,

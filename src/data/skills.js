@@ -7,6 +7,11 @@ export const skills = [
         docs: 'https://legacy.reactjs.org/docs/getting-started.html',
       },
       {
+        name: 'Material UI',
+        devIcon: 'devicon-materialui-plain colored',
+        docs: 'https://mui.com/material-ui/getting-started/overview/',
+      },
+      {
         name: 'TypeScript',
         devIcon: 'devicon-typescript-plain colored',
         docs: 'https://www.typescriptlang.org/docs/',
