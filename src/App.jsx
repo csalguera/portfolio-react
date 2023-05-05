@@ -113,15 +113,9 @@ function App() {
           setChecked={setChecked}
           setIsDarkPref={setIsDarkPref}
           handleToggle={handleToggle}
-          backgroundColor1={backgroundColor1}
-          backgroundColor2={backgroundColor2}
-          fontColor={fontColor}
         />
         <Landing
-          fontColor1={fontColor}
-          fontColor2={backgroundColor1}
           id={'projects'}
-          arrowColor={fontColor}
           scrollToElement={scrollToElement}
         />
         <Projects
