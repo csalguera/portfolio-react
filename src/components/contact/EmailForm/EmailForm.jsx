@@ -42,6 +42,9 @@ const EmailForm = (props) => {
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text)
       setEmailAlert(true)
+      setTimeout(() => {
+        setEmailAlert(false)
+      }, 3000);
       setBackdrop(false)
     })
     .catch((err) => {
