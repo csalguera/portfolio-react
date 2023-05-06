@@ -18,6 +18,7 @@ const SuccessAlert = (props) => {
           width: '100%',
           display: 'flex',
           alignItems: 'center',
+          pb: 1,
         }}
         spacing={2}
       >

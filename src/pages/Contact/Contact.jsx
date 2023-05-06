@@ -31,11 +31,11 @@ function Contact() {
       <EmailForm
         setEmailSent={setEmailSent}
       />
+      <Icons />
       <SuccessAlert
         emailSent={emailSent}
         setEmailSent={setEmailSent}
       />
-      <Icons />
     </main>
   )
 }
