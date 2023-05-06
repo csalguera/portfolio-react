@@ -72,17 +72,17 @@ const ProjectCard = (props) => {
             onClose={handleClose}
             anchorEl={anchorEl}
             anchorOrigin={{
-              vertical: 'center',
-              horizontal: 'center',
+              vertical: 'bottom',
+              horizontal: 'left',
             }}
             transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
+              vertical: 'bottom',
+              horizontal: 'left',
             }}
           >
             <Link
               href={project.image}
-              sx={{ cursor: 'pointer', m: 2 }}
+              sx={{ cursor: 'pointer', m: 5 }}
               underline='hover'
               target='_blank'
               rel='noreferrer'
