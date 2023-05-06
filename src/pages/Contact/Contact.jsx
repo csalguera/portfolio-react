@@ -12,7 +12,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function Contact() {
-  const [emailSent, setEmailSent] = useState(false)
+  const [emailAlert, setEmailAlert] = useState(false)
   const [backdrop, setBackdrop] = useState(false)
 
   return (
@@ -32,18 +32,17 @@ function Contact() {
         }}
       />
       <EmailForm
-        setEmailSent={setEmailSent}
+        setEmailAlert={setEmailAlert}
         setBackdrop={setBackdrop}
       />
       <Icons />
       <SuccessAlert
-        emailSent={emailSent}
-        setEmailSent={setEmailSent}
+        emailAlert={emailAlert}
+        setEmailAlert={setEmailAlert}
       />
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={backdrop}
-        // onClick={handleClose}
       >
         <CircularProgress color="inherit" />
       </Backdrop>

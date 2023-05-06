@@ -15,7 +15,7 @@ const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_
 
 const EmailForm = (props) => {
   const {
-    setEmailSent,
+    setEmailAlert,
     setBackdrop,
   } = props
 
@@ -41,7 +41,7 @@ const EmailForm = (props) => {
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text)
-      setEmailSent(true)
+      setEmailAlert(true)
       setBackdrop(false)
     })
     .catch((err) => {
