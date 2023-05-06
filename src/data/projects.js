@@ -31,4 +31,12 @@ export const projects = [
     deploymentLink: 'https://csalguera-connect-four.netlify.app/',
     technologies: [ 'HTML', 'CSS', 'JavaScript' ],
   },
+  {
+    title: 'Lapis, Papyrus, Scalpellus',
+    description: 'An HTML, CSS, and JavaScript app that simulates Rock, Paper, Scissors against an AI opponent.',
+    image: 'https://i.imgur.com/gM2OPVM.png',
+    repositoryLink: 'https://github.com/csalguera/rps',
+    deploymentLink: 'https://csalguera-rock-paper-scissors.netlify.app/',
+    technologies: [ 'HTML', 'CSS', 'JavaScript' ],
+  },
 ]
