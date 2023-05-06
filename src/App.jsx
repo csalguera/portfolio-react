@@ -124,7 +124,9 @@ function App() {
           scrollToElement={scrollToElement}
         />
         <Projects />
-        <About />
+        <About
+          checked={checked}
+        />
         <Contact />
       </ThemeProvider>
     </>

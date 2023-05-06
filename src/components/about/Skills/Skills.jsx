@@ -13,7 +13,8 @@ import Typography from "@mui/material/Typography"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-const Skills = () => {
+const Skills = (props) => {
+  const { checked } = props
   const [value, setValue] = useState('one');
   const [tabs, setTabs] = useState(false)
 
@@ -48,19 +49,22 @@ const Skills = () => {
           value={value}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
-          textColor="inherit"
+          textColor="primary"
         >
           <Tab
             value="one"
             label="frontend"
+            sx={{ color: checked ? '#fff' : '#000' }}
           />
           <Tab
             value="two"
             label="backend"
-          />
+            sx={{ color: checked ? '#fff' : '#000' }}
+            />
           <Tab
             value="three"
             label="other"
+            sx={{ color: checked ? '#fff' : '#000' }}
           />
         </Tabs>
       </Box>
