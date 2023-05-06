@@ -1,11 +1,17 @@
+// npm modules
+import { useState } from 'react';
+
 // components
 import EmailForm from '../../components/contact/EmailForm/EmailForm'
 import Icons from '../../components/contact/Icons/Icons';
+import SuccessAlert from '../../components/contact/SuccessAlert/SuccessAlert';
 
 // mui components
 import Typography from '@mui/material/Typography'
 
 function Contact() {
+  const [emailSent, setEmailSent] = useState(false)
+
   return (
     <main id='contact' className='page-component-container'>
       <Typography variant="h2">
@@ -22,8 +28,14 @@ function Contact() {
           marginTop: '5vh',
         }}
       />
-      <EmailForm />
+      <EmailForm
+        setEmailSent={setEmailSent}
+      />
       <Icons />
+      <SuccessAlert
+        emailSent={emailSent}
+        setEmailSent={setEmailSent}
+      />
     </main>
   )
 }
