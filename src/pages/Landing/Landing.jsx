@@ -27,7 +27,11 @@ function Landing(props) {
           <Typography variant="h1">
             Carlos Salguera
           </Typography>
-          <Typography variant="h5" sx={{ py: 1 }}>
+          <Typography
+            variant="h5"
+            sx={{ py: 1 }}
+            color="primary"
+          >
             FULL STACK DEVELOPER
           </Typography>
           <Typography sx={{ px: 10, py: 1 }}>
