@@ -11,26 +11,26 @@ const SuccessAlert = (props) => {
   }
 
   return (
-  <Zoom in={emailSent}>
-    <Stack
-      sx={{
-        mt: '4vh',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-      spacing={2}
-    >
-      <Alert
-        onClose={handleClose}
-        sx={{ minWidth: '200px' }}
-        variant='filled'
-        color='primary'
+    <Zoom in={emailSent}>
+      <Stack
+        sx={{
+          mt: '4vh',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+        spacing={2}
       >
-        Email sent!
-      </Alert>
-    </Stack>
-  </Zoom>
+        <Alert
+          onClose={handleClose}
+          sx={{ minWidth: '200px' }}
+          variant='filled'
+          color='primary'
+        >
+          Email sent!
+        </Alert>
+      </Stack>
+    </Zoom>
   )
 }
 
