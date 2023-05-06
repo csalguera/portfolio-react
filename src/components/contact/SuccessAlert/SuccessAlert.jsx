@@ -4,14 +4,14 @@ import Stack from '@mui/material/Stack';
 import Zoom from '@mui/material/Zoom';
 
 const SuccessAlert = (props) => {
-  const { emailSent, setEmailSent } = props
+  const { emailAlert, setEmailAlert } = props
 
   const handleClose = () => {
-    setEmailSent(!emailSent)
+    setEmailAlert(!emailAlert)
   }
 
   return (
-    <Zoom in={emailSent}>
+    <Zoom in={emailAlert}>
       <Stack
         sx={{
           mt: '4vh',

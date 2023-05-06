@@ -14,7 +14,10 @@ const REACT_APP_EMAILJS_SERVICE_ID = `${process.env.REACT_APP_EMAILJS_SERVICE_ID
 const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`
 
 const EmailForm = (props) => {
-  const { setEmailSent } = props
+  const {
+    setEmailAlert,
+    setBackdrop,
+  } = props
 
   const [toSend, setToSend] = useState({
     name: '',
@@ -29,6 +32,7 @@ const EmailForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setBackdrop(true)
     send(
       REACT_APP_EMAILJS_SERVICE_ID,
       REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -37,10 +41,15 @@ const EmailForm = (props) => {
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text)
-      setEmailSent(true)
+      setEmailAlert(true)
+      setTimeout(() => {
+        setEmailAlert(false)
+      }, 3000);
+      setBackdrop(false)
     })
     .catch((err) => {
       console.log('FAILED...', err)
+      setBackdrop(false)
     })
     setToSend({
       name: '',
