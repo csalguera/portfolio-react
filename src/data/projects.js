@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'log-go',
     description: 'A decoupled PERN stack app where authenticated users can create, update, or delete collections of their favorite movies and books.',
-    image: 'https://i.imgur.com/5jQAOqg.png',
+    image: 'https://i.imgur.com/xkC6516.png',
     repositoryLink: 'https://github.com/csalguera/log-go-front-end',
     deploymentLink: 'https://log-go-csalguera.netlify.app/',
     technologies: [ 'TypeScript', 'React', 'PostgreSQL', 'Sequelize', 'Vite', 'JWT Auth', 'CSS' ],
