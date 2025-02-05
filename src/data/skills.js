@@ -97,7 +97,7 @@ export const skills = [
       },
       {
         name: 'Google OAuth',
-        img: 'https://community.cdn.kony.com/sites/default/files/icon-google.png',
+        img: 'https://registry.npmmirror.com/@lobehub/icons-static-png/1.18.0/files/dark/google-color.png',
         docs: 'https://developers.google.com/identity/protocols/oauth2',
       },
     ],
