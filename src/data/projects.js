@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: 'Pokedex React App',
+    description: 'A decoupled MERN stack app where users can view various information about their favorite pokemon.',
+    image: 'https://i.imgur.com/YejgQ3G.png',
+    repositoryLink: 'https://github.com/csalguera/pokedex-react',
+    deploymentLink: 'https://pokdex-react.netlify.app/',
+    technologies: [ 'React', 'Node', 'Express', 'AWS S3', 'MUI', 'MongoDB', 'Mongoose' ],
+  },
+  {
     title: 'log-go',
     description: 'A decoupled PERN stack app where authenticated users can create, update, or delete collections of their favorite movies and books.',
     image: 'https://i.imgur.com/xkC6516.png',

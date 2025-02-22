@@ -68,6 +68,11 @@ export const skills = [
         img: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongoose/mongoose.png',
         docs: 'https://mongoosejs.com/docs/',
       },
+      {
+        name: 'AWS S3',
+        devIcon: 'devicon-amazonwebservices-plain-wordmark colored',
+        docs: 'https://docs.aws.amazon.com/s3/',
+      },
     ],
     other: [
       {
