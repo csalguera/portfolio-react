@@ -1,48 +1,37 @@
 // components
-import Skill from "../Skill/Skill"
+import Skill from "../Skill/Skill";
 
 // mui components
-import Box from "@mui/material/Box"
+import Box from "@mui/material/Box";
 
 const SkillContainer = (props) => {
-  const {
-    tabs,
-    value,
-    tabValue,
-    tech,
-  } = props
+  const { tabs, value, tabValue, tech } = props;
 
   return (
     <>
-      {(tabs && value === tabValue) || !tabs
-        ?
+      {!tabs || value === tabValue ? (
         <Box
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
           sx={{
-            minWidth: '300px',
+            minWidth: { xs: 0, sm: "300px" },
+            width: { xs: "100%", sm: "auto" },
             pt: 4,
-            mx: '1vw',
-            px: 2,
-            display: { md: 'none' }
+            mx: { xs: 0, sm: "1vw" },
+            px: { xs: 1, sm: 2 },
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          {tech[0].map(skill => (
-            <Skill
-              key={skill.name}
-              skill={skill}
-            />
+          {tech[0].map((skill) => (
+            <Skill key={skill.name} skill={skill} />
           ))}
         </Box>
-        :
-        ''
-      }
+      ) : (
+        ""
+      )}
     </>
-  )
-}
+  );
+};
 
-export default SkillContainer
+export default SkillContainer;

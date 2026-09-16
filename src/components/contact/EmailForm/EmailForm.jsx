@@ -1,78 +1,75 @@
 // npm modules
-import { useState } from "react"
-import { send } from 'emailjs-com'
+import { useState } from "react";
+import { send } from "emailjs-com";
 
 // mui components
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 // environment variables
-const REACT_APP_EMAILJS_PUBLIC_KEY = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
-const REACT_APP_EMAILJS_SERVICE_ID = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`
-const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`
+const REACT_APP_EMAILJS_PUBLIC_KEY = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
+const REACT_APP_EMAILJS_SERVICE_ID = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`;
+const REACT_APP_EMAILJS_TEMPLATE_ID = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`;
 
 const EmailForm = (props) => {
-  const {
-    setEmailAlert,
-    setBackdrop,
-  } = props
+  const { setEmailAlert, setBackdrop } = props;
 
   const [toSend, setToSend] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value })
-  }
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setBackdrop(true)
+    e.preventDefault();
+    setBackdrop(true);
     send(
       REACT_APP_EMAILJS_SERVICE_ID,
       REACT_APP_EMAILJS_TEMPLATE_ID,
       toSend,
       REACT_APP_EMAILJS_PUBLIC_KEY,
     )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text)
-      setEmailAlert(true)
-      setTimeout(() => {
-        setEmailAlert(false)
-      }, 3000);
-      setBackdrop(false)
-    })
-    .catch((err) => {
-      console.log('FAILED...', err)
-      setBackdrop(false)
-    })
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setEmailAlert(true);
+        setTimeout(() => {
+          setEmailAlert(false);
+        }, 3000);
+        setBackdrop(false);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+        setBackdrop(false);
+      });
     setToSend({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    })
-  }
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
 
   return (
     <>
-      <Typography variant="h5" sx={{ mt: '8vh' }}>
+      <Typography variant="h5" sx={{ mt: "8vh" }}>
         Email
       </Typography>
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: '12px'
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "12px",
         }}
       >
         <TextField
@@ -83,9 +80,13 @@ const EmailForm = (props) => {
           variant="outlined"
           focused
           onChange={handleChange}
-          sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          sx={{
+            mb: 2,
+            width: { xs: "100%", sm: "75vw", md: "50vw" },
+            maxWidth: "600px",
+          }}
           required
-          />
+        />
         <TextField
           id="outlined-basic"
           name="email"
@@ -94,9 +95,13 @@ const EmailForm = (props) => {
           variant="outlined"
           focused
           onChange={handleChange}
-          sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          sx={{
+            mb: 2,
+            width: { xs: "100%", sm: "75vw", md: "50vw" },
+            maxWidth: "600px",
+          }}
           required
-          />
+        />
         <TextField
           id="outlined-basic"
           name="subject"
@@ -105,9 +110,13 @@ const EmailForm = (props) => {
           variant="outlined"
           focused
           onChange={handleChange}
-          sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          sx={{
+            mb: 2,
+            width: { xs: "100%", sm: "75vw", md: "50vw" },
+            maxWidth: "600px",
+          }}
           required
-          />
+        />
         <TextField
           id="outlined-multiline-static"
           name="message"
@@ -117,15 +126,21 @@ const EmailForm = (props) => {
           rows={4}
           focused
           onChange={handleChange}
-          sx={{ mb: 2, width: '50vw', maxWidth: '600px' }}
+          sx={{
+            mb: 2,
+            width: { xs: "100%", sm: "75vw", md: "50vw" },
+            maxWidth: "600px",
+          }}
           required
         />
-        <Stack spacing={2} direction="row" sx={{ justifyContent: 'flex-end' }}>
-          <Button type="submit" variant="outlined">Submit</Button>
+        <Stack spacing={2} direction="row" sx={{ justifyContent: "flex-end" }}>
+          <Button type="submit" variant="outlined">
+            Submit
+          </Button>
         </Stack>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default EmailForm
+export default EmailForm;

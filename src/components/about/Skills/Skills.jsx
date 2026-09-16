@@ -2,7 +2,7 @@
 import { skills } from "../../../data/skills";
 
 // npm modules
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // components
 import SkillContainer from "../SkillContainer/SkillContainer";
@@ -12,43 +12,34 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const Skills = (props) => {
   const { checked } = props;
   const [value, setValue] = useState("one");
-  const [tabs, setTabs] = useState(false);
+  const theme = useTheme();
+  const tabs = useMediaQuery(theme.breakpoints.down("md"), { noSsr: true });
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 900) {
-        setTabs(false);
-      } else if (window.innerWidth <= 899) {
-        setTabs(true);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <>
-      <Typography variant="h4" sx={{ pt: "5vh" }}>
+      <Typography variant="h4" sx={{ pt: { xs: 4, sm: "5vh" } }}>
         Skills
       </Typography>
-      <Box sx={{ pt: 4, display: { sm: "block", md: "none" } }}>
+      <Box
+        sx={{ pt: 4, maxWidth: "100%", display: { xs: "block", md: "none" } }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
           textColor="primary"
+          variant="scrollable"
+          allowScrollButtonsMobile
         >
           <Tab
             value="one"
@@ -57,12 +48,12 @@ const Skills = (props) => {
           />
           <Tab
             value="two"
-            label="languages"
+            label="additional languages"
             sx={{ color: checked ? "#fff" : "#000" }}
           />
           <Tab
             value="three"
-            label="cloud"
+            label="cloud services"
             sx={{ color: checked ? "#fff" : "#000" }}
           />
         </Tabs>
@@ -71,6 +62,9 @@ const Skills = (props) => {
         sx={{
           textAlign: "center",
           display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          flexWrap: "wrap",
         }}
       >
         <SkillContainer

@@ -1,41 +1,37 @@
 // components
-import ArrowDown from "../../components/ArrowDown/ArrowDown"
+import ArrowDown from "../../components/ArrowDown/ArrowDown";
 
 // mui components
-import Box from "@mui/material/Box"
-import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 function Landing(props) {
-  const {
-    id,
-    arrowColor,
-    scrollToElement,
-  } = props
+  const { id, arrowColor, scrollToElement } = props;
 
   return (
     <>
       <main
-        id='landing'
-        className='page-component-container'
+        id="landing"
+        className="page-component-container"
         style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <Box sx={{ maxWidth: '700px', textAlign: 'center' }}>
-          <Typography variant="h1">
+        <Box sx={{ width: "100%", maxWidth: "700px", textAlign: "center" }}>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: "2.75rem", sm: "4rem", md: "6rem" } }}
+          >
             Carlos Salguera
           </Typography>
-          <Typography
-            variant="h5"
-            sx={{ py: 1 }}
-            color="primary"
-          >
+          <Typography variant="h5" sx={{ py: 1 }} color="primary">
             FULL STACK DEVELOPER
           </Typography>
-          <Typography sx={{ px: 10, py: 1 }}>
-            I am a Software Engineer with a focus on React, JavaScript, TypeScript, PostgreSQL, and MongoDB.
+          <Typography sx={{ px: { xs: 1, sm: 10 }, py: 1 }}>
+            I am a Software Engineer with a focus on React, JavaScript,
+            TypeScript, PostgreSQL, and MongoDB.
           </Typography>
         </Box>
         <ArrowDown
@@ -45,7 +41,7 @@ function Landing(props) {
         />
       </main>
     </>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

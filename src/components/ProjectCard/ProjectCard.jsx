@@ -1,26 +1,26 @@
 // npm modules
-import { useState } from 'react';
+import { useState } from "react";
 
 // mui components
-import Link from '@mui/material/Link';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardActions from '@mui/material/CardActions';
-import Popover from '@mui/material/Popover';
-import { useTheme } from '@emotion/react';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import Link from "@mui/material/Link";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
+import Popover from "@mui/material/Popover";
+import { useTheme } from "@emotion/react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ProjectCard = (props) => {
-  const { project } = props
+  const { project } = props;
 
-  const theme = useTheme()
-  const lg = useMediaQuery(theme.breakpoints.between('lg', 'xl'))
-  const xl = useMediaQuery(theme.breakpoints.up('xl'))
+  const theme = useTheme();
+  const lg = useMediaQuery(theme.breakpoints.between("lg", "xl"));
+  const xl = useMediaQuery(theme.breakpoints.up("xl"));
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -32,10 +32,17 @@ const ProjectCard = (props) => {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const id = open ? "simple-popover" : undefined;
 
   return (
-    <Card sx={{ maxWidth: 400, mx: '2vw', mb: 4 }}>
+    <Card
+      sx={{
+        width: { xs: "100%", sm: 400 },
+        maxWidth: 400,
+        mx: { xs: 0, sm: "2vw" },
+        mb: 4,
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -44,64 +51,83 @@ const ProjectCard = (props) => {
           alt={project.title}
           onClick={handleClick}
         />
-        {(lg || xl)
-        ?
+        {lg || xl ? (
           <Popover
             id={id}
             open={open}
             onClose={handleClose}
-            anchorReference='none'
+            anchorReference="none"
             sx={{
-              width: '100vw',
-              height: '100vh',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
+              width: "100vw",
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <img
               src={project.image}
               alt={project.title}
-              width={ lg ? "1200" : "1600" }
+              width={lg ? "1200" : "1600"}
             />
           </Popover>
-        :
+        ) : (
           <Popover
             id={id}
             open={open}
             onClose={handleClose}
             anchorEl={anchorEl}
             anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
+              vertical: "bottom",
+              horizontal: "left",
             }}
             transformOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
+              vertical: "bottom",
+              horizontal: "left",
             }}
           >
             <Link
               href={project.image}
-              sx={{ cursor: 'pointer', m: 5 }}
-              underline='hover'
-              target='_blank'
-              rel='noreferrer'
+              sx={{ cursor: "pointer", m: 5 }}
+              underline="hover"
+              target="_blank"
+              rel="noreferrer"
             >
               Open image
             </Link>
           </Popover>
-        }
-        <CardContent sx={{ height: 180 }}>
-          <Typography gutterBottom variant="h5" component="div">
+        )}
+        <CardContent
+          sx={{
+            height: "auto",
+            minHeight: { sm: 180 },
+            boxSizing: "border-box",
+          }}
+        >
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            sx={{ overflowWrap: "anywhere" }}
+          >
             {project.title}
           </Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', py: 1 }}>
-            {project.technologies.map(technology => (
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              columnGap: 0.5,
+              rowGap: 0.5,
+              py: 1,
+            }}
+          >
+            {project.technologies.map((technology) => (
               <Typography
                 key={technology}
                 sx={{
-                  px: 0.5, pb: 1,
-                  fontSize: '12px'
+                  px: 0.5,
+                  fontSize: "12px",
+                  overflowWrap: "anywhere",
                 }}
                 color="primary"
               >
@@ -109,7 +135,11 @@ const ProjectCard = (props) => {
               </Typography>
             ))}
           </Box>
-          <Typography variant="body2" color="text.primary">
+          <Typography
+            variant="body2"
+            color="text.primary"
+            sx={{ overflowWrap: "anywhere" }}
+          >
             {project.description}
           </Typography>
         </CardContent>
@@ -118,20 +148,20 @@ const ProjectCard = (props) => {
         <Button size="small">
           <Link
             href={project.repositoryLink}
-            underline='hover'
-            target='_blank'
-            rel='noreferrer'
+            underline="hover"
+            target="_blank"
+            rel="noreferrer"
             color="primary"
-            >
+          >
             GitHub
           </Link>
         </Button>
         <Button size="small">
           <Link
             href={project.deploymentLink}
-            underline='hover'
-            target='_blank'
-            rel='noreferrer'
+            underline="hover"
+            target="_blank"
+            rel="noreferrer"
             color="primary"
           >
             Live App
@@ -139,7 +169,7 @@ const ProjectCard = (props) => {
         </Button>
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
