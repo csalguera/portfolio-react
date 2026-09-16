@@ -51,22 +51,6 @@ export const projects = [
     ],
   },
   {
-    title: "Game-Pocket",
-    description:
-      "A decoupled MERN stack app built with two fellow cohort-mates. Create, join, or delete chatrooms and chat in real-time",
-    image: "https://i.imgur.com/UQkdGBe.png",
-    repositoryLink: "https://github.com/csalguera/Game-Pocket-Front-End",
-    deploymentLink: "https://game-pocket.netlify.app/",
-    technologies: [
-      "React",
-      "Socket.io",
-      "JavaScript",
-      "Node",
-      "MongoDB",
-      "CSS",
-    ],
-  },
-  {
     title: "garner",
     description:
       "A backend MEN stack app where authenticated users can create, update, or delete collections of their favorite games.",
